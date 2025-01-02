@@ -1,0 +1,138 @@
+<mat-accordion class="example-headers-align">
+  <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <div
+          class="m-3 d-flex flex-row align-items-center justify-content-center"
+        >
+          <!-- <i
+        class="material-icons"
+        style="
+          font-size: 25px;
+          color: #57747b !important;
+          font-weight: 600;
+        "
+        >person</i> -->
+          <i
+            class="fa-solid fa-person-walking-arrow-right"
+            style="font-size: 25px; color: #57747b !important; font-weight: 600"
+          ></i>
+
+          <span
+            class="ms-1 p-2"
+            style="
+              font-size: medium;
+              color: #57747b !important;
+              font-weight: 600;
+            "
+            translate="Leave Application Form"
+          >
+          </span>
+        </div>
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <div class="card" style="text-transform: capitalize">
+      <div class="card-body">
+        <div class="container mt-0">
+          <span class="row">
+            <h6 class="col-8 header-title text-start" *ngIf="!show">
+              Leave Quota Application
+            </h6>
+            <h6 class="col-8 header-title text-start" *ngIf="show">
+              {{ eduInfo.key }}
+            </h6>
+            <h6 class="col-4 header-title text-end" *ngIf="show">
+              Balance:{{ eduInfo.balance }}
+            </h6>
+          </span>
+
+          <form [formGroup]="leaveForm" (ngSubmit)="onSubmit()">
+            <div class="row">
+              <div class="col-12 col-md-12 mt-2">
+                <div>
+                  <label class="font-weight-bolder col-3"
+                    >Leave Type: 
+                    </label
+                  >
+                  <span class="col-9"><p-dropdown [options]="overall" [(ngModel)]="selectedCity1" optionLabel="name"></p-dropdown>
+                  </span>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 mt-2">
+                <label for="fromDate">From Date</label>
+                <p-calendar
+                  id="fromDate"
+                  [appendTo]="'body'"
+                  formControlName="fromDate"
+                  dateFormat="dd-mm-yy"
+                  [showTime]="false"
+                  (onSelect)="calculateDays()"
+                  [disabledDays]="[0]"
+                  [disabledDates]="disabledDates"
+                ></p-calendar>
+              </div>
+              <div class="col-12 col-md-6 mt-2">
+                <label for="toDate">To Date</label>
+                <p-calendar
+                  id="toDate"
+                  [appendTo]="'body'"
+                  formControlName="toDate"
+                  dateFormat="dd-mm-yy"
+                  [showTime]="false"
+                  (onSelect)="calculateDays()"
+                  [disabledDays]="[0]"
+                  [disabledDates]="disabledDates"
+                ></p-calendar>
+              </div>
+              <div class="col-12 col-md-6">
+                <label for="reason">Reason for Leave</label>
+                <textarea
+                  id="reason"
+                  formControlName="reason"
+                  class="form-control"
+                  rows="4"
+                  autoResize="autoResize"
+                ></textarea>
+              </div>
+              <div class="col-12 col-md-6 mt-2">
+                <div *ngIf="daysDifference !== null">
+                  <label class="font-weight-bolder"
+                    >Number of Days: {{ daysDifference }}</label
+                  >
+                </div>
+              </div>
+              
+              <div class="col-12 col-md-12 photo-upload-container mt-2">
+                <div class="container overall">
+                  <h6>Upload File (Max 2MB)</h6>
+                  <input
+                    type="file"
+                    (change)="onFileChange($event)"
+                    accept="application/pdf"
+                    class="form-control"
+                  />
+                  <p *ngIf="errorMessage" style="color: red">
+                    {{ errorMessage }}
+                  </p>
+                  <!-- <p *ngIf="fileName">Selected file: {{ fileName }}</p> -->
+                  <button *ngIf="fileName" (click)="uploadFile()">
+                    Upload
+                  </button>
+                </div>
+              </div>
+              <div class="col-12 mt-3">
+                <button
+                  type="submit"
+                  class="btn btn-success"
+                  [disabled]="leaveForm.invalid"
+                >
+                  Submit
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </mat-expansion-panel>
+</mat-accordion>

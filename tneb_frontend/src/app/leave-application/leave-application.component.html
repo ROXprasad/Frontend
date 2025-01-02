@@ -1,0 +1,163 @@
+<div>
+    <!-- <ejs-toolbar cssClass="defaultToolbar" id="defaultToolbar">
+        <e-items>
+            <e-item prefixIcon="e-tbar-menu-icon tb-icons" tooltipText="Menu"></e-item>
+            <e-item>
+                <ng-template #template>
+                    <div class="e-folder">
+                        <div class="e-folder-name">
+                            <h5>LEAVE MANAGEMENT</h5>
+                        </div>
+                    </div>
+                </ng-template>
+            </e-item>
+            <e-item align="Right">
+                <ng-template #template>
+                    <div>
+                        <div class="e-user-name">
+                            <button class="btn_header"><span class="e-icons e-comments">SMS</span></button>
+                            <button class="btn_header"> <span class="e-icons e-emoji">EMAIL</span></button>
+                            <button class="btn_header"> <span class="e-icons e-emoji"
+                                    (click)="exit()">EXIT</span></button>
+                        </div>
+                    </div>
+                </ng-template>
+            </e-item>
+        </e-items>
+    </ejs-toolbar> -->
+    <header>
+        <div class="header_container">
+            <div class="header_title">
+                <!-- <button class="btn_header" type="button" mat-button (click)="drawer.toggle()" (click)="showFiller = !showFiller"> -->
+                <i class="fa fa-bars" aria-hidden="true"></i>
+                <!-- </button> -->
+                <p style="font-size: 14px;font-weight: bold;margin-left: 10px;">TNEB (USER DETAIL)</p>
+            </div>
+            <div>
+                <button class="btn_header" mat-button><i class="fa fa-comment" aria-hidden="true"></i> SMS</button>
+                <!-- <mat-menu #belowMenu="matMenu" yPosition="below">
+              <button mat-menu-item>Item 1</button>
+              <button mat-menu-item>Item 2</button>
+            </mat-menu> -->
+
+                <button class="btn_header" mat-button><i class="fa fa-envelope" aria-hidden="true"></i> EMAIL</button>
+                <!-- <mat-menu #belowMenu="matMenu" yPosition="below">
+              <button mat-menu-item>Item 1</button>
+              <button mat-menu-item>Item 2</button>
+            </mat-menu> -->
+
+                <button class="btn_header" mat-button><i class="fa fa-phone" aria-hidden="true"></i> MISS CALL</button>
+                <!-- <mat-menu #belowMenu="matMenu" xPosition="before">
+              <button mat-menu-item>Item 1</button>
+              <button mat-menu-item>Item 2</button>
+            </mat-menu> -->
+
+
+                <button class="btn_header" mat-button><i class="fa fa-lock" aria-hidden="true"></i> ADMIN</button>
+                <!-- <mat-menu #belowMenu="matMenu" xPosition="after">
+              <button mat-menu-item>Item 1</button>
+              <button mat-menu-item>Item 2</button>
+            </mat-menu> -->
+                <button mat-button><img height="25px" src="/assets/man.png" alt="John" /></button>
+            </div>
+        </div>
+    </header>
+</div>
+
+<div class="col-lg-12 control-section card-control-section basic_card_layout">
+    <div class="e-sample-resize-container e-card-resize-container">
+        <div class='row'>
+            <div class="row card-layout">
+                <div class="col-xs-10 col-sm-10 col-lg-10 col-md-10">
+                    <div tabindex="0" class="e-card" id="basic_card">
+                        <!-- <div class="user_title">Leave Application</div> -->
+                        <div class="e-card-content">
+                            <!-- src/app/responsive-form/responsive-form.component.html -->
+                            <div class="scroll-container">
+                                <form class="responsive-form">
+                                    <div class="user_title">Leave Application</div>
+                                    <div class="container">
+                                        <div class="e-card-header">
+                                            <div class="e-card-header-caption">
+                                                <!-- <div class="e-card-header-title">User Detail Form</div> -->
+                                                <!-- <div class="e-card-sub-title">Given Detail</div> -->
+                                            </div>
+                                        </div>
+                                        <div class="form_container">
+                                            <div class="form-group">
+                                                <div class="img-container">
+                                                    <img class="Img_profile" src="/assets/pngegg.png">
+                                                </div>
+                                                <div class="form_con">
+                                                    <div class="input_flex">
+                                                        <input type="text" id="empname" name="name"
+                                                            placeholder="Employee Name" required [disabled]="true"
+                                                            class="input_custom">
+                                                        <input type="text" id="empid" name="name"
+                                                            placeholder="Employee Id" required [disabled]="true"
+                                                            class="input_custom">
+                                                        <input type="text" id="empid" name="name"
+                                                            placeholder="Employee Id" required [disabled]="true"
+                                                            class="input_custom">
+                                                    </div>
+                                                    <div class="input_flex">
+                                                        <input type="date" id="DOJ" name="DOJ" placeholder="D.O.J"
+                                                            required [disabled]="true" class="input_custom">
+                                                        <input type="text" id="empid" name="name"
+                                                            placeholder="Employee Id" required [disabled]="true"
+                                                            class="input_custom">
+                                                        <input type="text" id="empid" name="name"
+                                                            placeholder="Employee Id" required [disabled]="true"
+                                                            class="input_custom">
+                                                    </div>
+                                                    <div class="input_flex">
+                                                        <input type="date" id="DOJ" name="DOJ" placeholder="D.O.J"
+                                                            required [disabled]="true" class="input_custom">
+                                                        <input type="text" id="empid" name="name"
+                                                            placeholder="Employee Id" required [disabled]="true"
+                                                            class="input_custom">
+                                                        <input type="text" id="empid" name="name"
+                                                            placeholder="Employee Id" required [disabled]="true"
+                                                            class="input_custom">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="container">
+                                        <div class="e-card-header">
+                                            <div class="e-card-header-caption">
+                                                <!-- <div class="e-card-header-title">Unfilled Form Detail</div> -->
+                                                <!-- <div class="e-card-sub-title">Given Detail</div> -->
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <!-- <ejs-dropdownlist id='ddlelement' class="dropdown_container" [dataSource]='data' placeholder = 'Leave Form'></ejs-dropdownlist> -->
+                                            <input type="date" id="DOJ" name="DOJ" placeholder="D.O.J" required>
+                                            <input type="date" id="DOJ" name="DOJ" placeholder="D.O.J" required>
+                                            <input type="file" id="empid" name="name" placeholder="Employee Id"
+                                                required>
+                                        </div>
+                                        <div class="form-group">
+                                            <textarea id="message" name="message" rows="5" placeholder="Reason....."
+                                                required></textarea>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="sub_btn">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="arrowndownEnable">
+    <button class="btn_arrow" (click)="keyDown()"><span class="e-icons e-chevron-down-double"></span></button>
+</div>
+<div *ngIf="!arrowndownEnable">
+    <button class="btn_arrow_Up" (click)="keyUp()"><span class="e-icons e-chevron-up-double"></span></button>
+</div>

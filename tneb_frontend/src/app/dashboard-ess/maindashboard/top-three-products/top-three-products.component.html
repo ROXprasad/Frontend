@@ -1,0 +1,53 @@
+<div *ngIf="!isMobile" class="card mat-elevation-z4">
+  <div class="card-body" *ngIf="!contentloader">
+    <div class="card-title">
+        <h4>Leave Balance</h4>
+    </div>
+    <apx-chart
+    [series]="chartOptions.series"
+    [chart]="chartOptions.chart"
+    [labels]="chartOptions.labels"
+    [title]="chartOptions.title"
+    [theme]="chartOptions.theme"
+    [fill]="chartOptions.fill"
+    [yaxis]="chartOptions.yaxis"
+    [stroke]="chartOptions.stroke"
+    [legend]="chartOptions.legend"
+    [plotOptions]="chartOptions.plotOptions"
+  ></apx-chart>
+  </div>
+  <div class="card-body" *ngIf="contentloader">
+    <div class="card-title">
+        <h4><p-skeleton width="100%" height="50px"></p-skeleton></h4>
+    </div>
+    <p-skeleton width="100%" height="200px"></p-skeleton>
+  </div>
+</div>
+
+<!-- Show FullCalendar outside .card for smaller screens -->
+<div class="card" *ngIf="isMobile">
+  <div *ngIf="!contentloader">
+    <div class="card-title">
+      <h6>Leave Balance</h6>
+  </div>
+  <apx-chart
+    [series]="chartOptionsmobile.series"
+    [chart]="chartOptionsmobile.chart"
+    [labels]="chartOptionsmobile.labels"
+    [title]="chartOptionsmobile.title"
+    [theme]="chartOptionsmobile.theme"
+    [fill]="chartOptionsmobile.fill"
+    [yaxis]="chartOptionsmobile.yaxis"
+    [stroke]="chartOptionsmobile.stroke"
+    [legend]="chartOptionsmobile.legend"
+    [plotOptions]="chartOptionsmobile.plotOptions"
+  ></apx-chart>
+  </div>
+  <div class="card" *ngIf="isMobile">
+  <div *ngIf="contentloader">
+    <div class="card-title">
+      <h6><p-skeleton width="100%" height="50px"></p-skeleton></h6>
+  </div>
+  <p-skeleton width="100%" height="200px"></p-skeleton>
+  </div>
+</div>

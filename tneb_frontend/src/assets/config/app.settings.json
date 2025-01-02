@@ -1,0 +1,11 @@
+{
+    "ApplicationSettings": {
+      "AUTH_URL": "https://ess.tangedco.org/api",
+      "APP_VERSION": "1.0.1",
+      "APP_ENV": "FEA",
+      "APP_ID": "4",
+      "TimerStart":20,
+      "TimerDialog":1
+    }
+  }
+  

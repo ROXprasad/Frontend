@@ -1,0 +1,854 @@
+<div class="container py-2">
+  <div class="" style="width: 100%">
+    <div class="card">
+      <div class="card-body">
+        <!-- <h6 class="card-title">Personal Details : -</h6> -->
+        <form [formGroup]="personalform" class="py-2">
+          <!-- 1st row -->
+          <div class="initials p-fluid p-grid col-md-12 col-12">
+            <div class="d-flex flex-row col-md-4 col-4">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <input
+                      type="text"
+                      class="input-font-w"
+                      id="txtFiche"
+                      #txtFiche1
+                      pInputText
+                      placeholder="ID SHEET"
+                      formControlName="fcpersonalno"
+                      [disabled]="isDisabled1"
+                      autocomplete="off"
+                      maxlength="10"
+                    />
+                    <label for="inputtext">Employee No.</label>
+                  </span>
+                </div>
+              </div>
+              <!-- <span class="col-md-1 ms-2 edit" *ngIf="isDisabled1">
+                <i class="material-icons" (click)="toggleenable(1)">edit</i>
+              </span>
+              <span class="col-md-1 checks" *ngIf="!isDisabled1">
+                <i class="material-icons text-danger" (click)="toggledisable(1)"
+                  >close</i
+                >
+                <i class="material-icons text-success">check</i>
+              </span> -->
+            </div>
+            <div class="d-flex flex-row col-md-4 col-4">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <input
+                      type="text"
+                      class="input-font-w"
+                      id="txtFiche"
+                      #txtFiche2
+                      pInputText
+                      (input)="past($event)"
+                      placeholder="Name"
+                      formControlName="fcfname"
+                      [disabled]="isDisabled2"
+                      autocomplete="off"
+                      maxlength="10"
+                    />
+                    <label for="inputtext">Name</label>
+                  </span>
+                </div>
+              </div>
+              <!-- <span class="col-md-1 ms-2 edit" *ngIf="isDisabled2">
+                <i class="material-icons" (click)="toggleenable(2)">edit</i>
+              </span>
+              <span class="col-md-1 checks" *ngIf="!isDisabled2">
+                <i class="material-icons text-danger" (click)="toggledisable(2)"
+                  >close</i
+                >
+                <i class="material-icons text-success">check</i>
+              </span> -->
+            </div>
+            <!-- <div class="d-flex flex-row col-md-4 col-4">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <input
+                      type="text"
+                      class="input-font-w"
+                      id="txtFiche"
+                      #txtFiche3
+                      placeholder="Last Name"
+                      pInputText
+                      (input)="past($event)"
+                      formControlName="fclname"
+                      [disabled]="isDisabled3"
+                      autocomplete="off"
+                      maxlength="10"
+                    />
+                    <label for="inputtext">Last Name</label>
+                  </span>
+                </div>
+              </div>
+              <span class="col-md-1 ms-2 edit" *ngIf="isDisabled3">
+                <i class="material-icons" (click)="toggleenable(3)">edit</i>
+              </span>
+              <span class="col-md-1 checks" *ngIf="!isDisabled3">
+                <i class="material-icons text-danger" (click)="toggledisable(3)"
+                  >close</i
+                >
+                <i class="material-icons text-success">check</i>
+              </span>
+            </div> -->
+            <div class="d-flex flex-row col-md-4 col-4">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <p-dropdown
+                      [appendTo]="'body'"
+                      inputId="dropdown"
+                      [autoDisplayFirst]="false"
+                      [options]="cities"
+                      #txtFiche4
+                      placeholder="Gender"
+                      formControlName="fcgender"
+                      [disabled]="isDisabled4"
+                      optionLabel="name"
+                    ></p-dropdown>
+                    <label for="dropdown">Gender</label>
+                  </span>
+                </div>
+              </div>
+              <!-- <span class="col-md-1 ms-2 edit" *ngIf="isDisabled4">
+                <i class="material-icons" (click)="toggleenable(4)">edit</i>
+              </span>
+              <span class="col-md-1 checks" *ngIf="!isDisabled4">
+                <i class="material-icons text-danger" (click)="toggledisable(4)"
+                  >close</i
+                >
+                <i class="material-icons text-success">check</i>
+              </span> -->
+            </div>
+          </div>
+          <!-- 2nd row -->
+          <div class="initials p-fluid p-grid col-md-12 col-12">
+            <div class="d-flex flex-row col-md-4 col-4">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <input
+                      type="text"
+                      class="input-font-w"
+                      id="txtFiche4"
+                      #txtFiche16
+                      pInputText
+                      placeholder="Blood Group"
+                      formControlName="fcbloodgrp"
+                      [disabled]="isDisabled16"
+                      autocomplete="off"
+                      maxlength="10"
+                    />
+                    <label for="inputtext">Blood Group</label>
+                  </span>
+                </div>
+              </div>
+              <!-- <span class="col-md-1 ms-2 edit" *ngIf="isDisabled16">
+                <i class="material-icons" (click)="toggleenable(16)">edit</i>
+              </span>
+              <span class="col-md-1 checks" *ngIf="!isDisabled16">
+                <i class="material-icons text-danger" (click)="toggledisable(16)"
+                  >close</i
+                >
+                <i class="material-icons text-success">check</i>
+              </span> -->
+            </div>
+            <div class="d-flex flex-row col-md-4 col-4">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <p-calendar
+                      [appendTo]="'body'"
+                      dateFormat="dd-mm-yy"
+                      inputId="dateformat"
+                      formControlName="fcdate"
+                      id="txtFiche5"
+                      #txtFiche5
+                      placeholder="Date of Birth"
+                      [disabled]="isDisabled5"
+                    ></p-calendar>
+                    <label for="inputtext">Date of Birth</label>
+                  </span>
+                </div>
+              </div>
+              <!-- <span class="col-md-1 ms-2 edit" *ngIf="isDisabled5">
+                <i class="material-icons" (click)="toggleenable(5)">edit</i>
+              </span>
+              <span class="col-md-1 checks" *ngIf="!isDisabled5">
+                <i class="material-icons text-danger" (click)="toggledisable(5)"
+                  >close</i
+                >
+                <i class="material-icons text-success">check</i>
+              </span> -->
+            </div>
+            <div class="d-flex flex-row col-md-4 col-4">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <input
+                      type="text"
+                      class="input-font-w"
+                      id="txtFiche"
+                      #txtFiche7
+                      pInputText
+                      placeholder="Birth Place"
+                      formControlName="fcbirth"
+                      [disabled]="isDisabled7"
+                      autocomplete="off"
+                      maxlength="10"
+                    />
+                    <label for="inputtext">Birth Place</label>
+                  </span>
+                </div>
+              </div>
+              <!-- <span class="col-md-1 ms-2 edit" *ngIf="isDisabled7">
+                <i class="material-icons" (click)="toggleenable(7)">edit</i>
+              </span>
+              <span class="col-md-1 checks" *ngIf="!isDisabled7">
+                <i class="material-icons text-danger" (click)="toggledisable(7)"
+                  >close</i
+                >
+                <i class="material-icons text-success">check</i>
+              </span> -->
+            </div>
+          </div>
+          <!-- 3rd row -->
+          <div class="initials p-fluid p-grid col-md-12 col-12">
+           
+            <div class="d-flex flex-row col-md-4 col-4">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <input
+                      type="text"
+                      class="input-font-w"
+                      id="txtFiche6"
+                      #txtFiche6
+                      pInputText
+                      placeholder="State"
+                      formControlName="fcstatus"
+                      [disabled]="isDisabled6"
+                      autocomplete="off"
+                      maxlength="10"
+                    />
+                    <label for="inputtext">State</label>
+                  </span>
+                </div>
+              </div>
+              <!-- <span class="col-md-1 ms-2 edit" *ngIf="isDisabled6">
+                <i class="material-icons" (click)="toggleenable(6)">edit</i>
+              </span>
+              <span class="col-md-1 checks" *ngIf="!isDisabled6">
+                <i class="material-icons text-danger" (click)="toggledisable(6)"
+                  >close</i
+                >
+                <i class="material-icons text-success">check</i>
+              </span> -->
+            </div>
+            <div class="d-flex flex-row col-md-4 col-4">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <input
+                      type="text"
+                      class="input-font-w"
+                      id="txtFiche"
+                      #txtFiche8
+                      pInputText
+                      placeholder="Nationality"
+                      formControlName="fcnationality"
+                      [disabled]="isDisabled8"
+                      autocomplete="off"
+                      maxlength="10"
+                    />
+                    <label for="inputtext">Nationality</label>
+                  </span>
+                </div>
+              </div>
+              <!-- <span class="col-md-1 ms-2 edit" *ngIf="isDisabled8">
+                <i class="material-icons" (click)="toggleenable(8)">edit</i>
+              </span>
+              <span class="col-md-1 checks" *ngIf="!isDisabled8">
+                <i class="material-icons text-danger" (click)="toggledisable(8)"
+                  >close</i
+                >
+                <i class="material-icons text-success">check</i>
+              </span> -->
+            </div>
+            <div class="d-flex flex-row col-md-4 col-4">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <input
+                      type="text"
+                      class="input-font-w"
+                      id="txtFiche"
+                      #txtFiche9
+                      placeholder="Comm. Lang."
+                      pInputText
+                      formControlName="fccommunicationlang"
+                      [disabled]="isDisabled9"
+                      autocomplete="off"
+                      maxlength="10"
+                    />
+                    <label for="inputtext">Comm. Lang.</label>
+                  </span>
+                </div>
+              </div>
+              <!-- <span class="col-md-1 ms-2 edit" *ngIf="isDisabled9">
+                <i class="material-icons" (click)="toggleenable(9)">edit</i>
+              </span>
+              <span class="col-md-1 checks" *ngIf="!isDisabled9">
+                <i class="material-icons text-danger" (click)="toggledisable(9)"
+                  >close</i
+                >
+                <i class="material-icons text-success">check</i>
+              </span> -->
+            </div>
+          </div>
+          <!-- 4th row -->
+          <div class="initials p-fluid p-grid col-md-12 col-12">
+            <div class="d-flex flex-row col-md-4 col-4">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <input
+                      type="text"
+                      class="input-font-w"
+                      id="txtFiche4"
+                      #txtFiche10
+                      pInputText
+                      placeholder="Religion"
+                      formControlName="fcreligion"
+                      [disabled]="isDisabled10"
+                      autocomplete="off"
+                      maxlength="10"
+                    />
+                    <label for="inputtext">Religion</label>
+                  </span>
+                </div>
+              </div>
+              <!-- <span class="col-md-1 ms-2 edit" *ngIf="isDisabled10">
+                <i class="material-icons" (click)="toggleenable(10)">edit</i>
+              </span>
+              <span class="col-md-1 checks" *ngIf="!isDisabled10">
+                <i
+                  class="material-icons text-danger"
+                  (click)="toggledisable(10)"
+                  >close</i
+                >
+                <i class="material-icons text-success">check</i>
+              </span> -->
+            </div>
+            <div class="d-flex flex-row col-md-4 col-4">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <!-- <input
+                    type="text"
+                    class="input-font-w"
+                    id="txtFiche4"
+                    #txtFiche11
+                    pInputText
+                    placeholder="Marital Status"
+                    formControlName="fcmaritalstat"
+                    [disabled]="isDisabled11"
+                    autocomplete="off"
+                    maxlength="10"
+                  /> -->
+                    <p-dropdown
+                      [appendTo]="'body'"
+                      inputId="dropdown"
+                      [autoDisplayFirst]="false"
+                      [options]="marital"
+                      #txtFiche11
+                      placeholder="Marital Status"
+                      formControlName="fcmaritalstat"
+                      [disabled]="isDisabled11"
+                      optionLabel="name"
+                    ></p-dropdown>
+                    <label for="inputtext">Marital Status</label>
+                  </span>
+                </div>
+              </div>
+              <!-- <span class="col-md-1 ms-2 edit" *ngIf="isDisabled11">
+                <i class="material-icons" (click)="toggleenable(11)">edit</i>
+              </span>
+              <span class="col-md-1 checks" *ngIf="!isDisabled11">
+                <i
+                  class="material-icons text-danger"
+                  (click)="toggledisable(11)"
+                  >close</i
+                >
+                <i class="material-icons text-success">check</i>
+              </span> -->
+            </div>
+            <div class="d-flex flex-row col-md-4 col-4">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <input
+                      type="text"
+                      class="input-font-w"
+                      id="txtFiche6"
+                      #txtFiche12
+                      pInputText
+                      placeholder="Caste"
+                      formControlName="fccastetype"
+                      [disabled]="isDisabled12"
+                      autocomplete="off"
+                      maxlength="10"
+                    />
+                    <label for="inputtext">Caste</label>
+                  </span>
+                </div>
+              </div>
+              <!-- <span class="col-md-1 ms-2 edit" *ngIf="isDisabled12">
+                <i class="material-icons" (click)="toggleenable(12)">edit</i>
+              </span>
+              <span class="col-md-1 checks" *ngIf="!isDisabled12">
+                <i
+                  class="material-icons text-danger"
+                  (click)="toggledisable(12)"
+                  >close</i
+                >
+                <i class="material-icons text-success">check</i>
+              </span> -->
+            </div>
+          </div>
+          <!-- 5th row -->
+          <div class="initials p-fluid p-grid colmd-12 col-12">
+            <div class="d-flex flex-row col-md-4 col-4">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <input
+                      type="text"
+                      class="input-font-w"
+                      id="txtFiche4"
+                      #txtFiche13
+                      pInputText
+                      placeholder="Sub Caste"
+                      formControlName="fcsubcaste"
+                      [disabled]="isDisabled13"
+                      autocomplete="off"
+                      maxlength="10"
+                    />
+                    <label for="inputtext">Sub Caste</label>
+                  </span>
+                </div>
+              </div>
+              <!-- <span class="col-md-1 ms-2 edit" *ngIf="isDisabled13">
+                <i class="material-icons" (click)="toggleenable(13)">edit</i>
+              </span>
+              <span class="col-md-1 checks" *ngIf="!isDisabled13">
+                <i
+                  class="material-icons text-danger"
+                  (click)="toggledisable(13)"
+                  >close</i
+                >
+                <i class="material-icons text-success">check</i>
+              </span> -->
+            </div>
+            <!-- <div class="d-flex flex-row col-md-4 col-4">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <input
+                      type="text"
+                      class="input-font-w"
+                      id="txtFiche4"
+                      #txtFiche14
+                      pInputText
+                      placeholder="Height"
+                      formControlName="fcheight"
+                      [disabled]="isDisabled14"
+                      autocomplete="off"
+                      maxlength="10"
+                    />
+                    <label for="inputtext">Height</label>
+                  </span>
+                </div>
+              </div>
+              <span class="col-md-1 ms-2 edit" *ngIf="isDisabled14">
+                <i class="material-icons" (click)="toggleenable(14)">edit</i>
+              </span>
+              <span class="col-md-1 checks" *ngIf="!isDisabled14">
+                <i class="material-icons text-danger" (click)="toggledisable(14)"
+                  >close</i
+                >
+                <i class="material-icons text-success">check</i>
+              </span>
+            </div> -->
+            <div class="field col-md-4 col-4">
+              <div class="p-inputgroup d-flex flex-row">
+                <div class="mb-1 col-md-8 col-8">
+                  <div class="p-col-12 p-md-4">
+                    <span class="p-float-label">
+                      <input
+                        type="text"
+                        class="input-font-w"
+                        id="txtFiche4"
+                        #txtFiche14
+                        pInputText
+                        placeholder="Height"
+                        formControlName="fcheight"
+                        [disabled]="isDisabled14"
+                        autocomplete="off"
+                        maxlength="10"
+                      />
+                      <label for="inputtext">Height</label>
+                      <span class="p-inputgroup-addon">cm</span>
+                    </span>
+                  </div>
+                </div>
+                <!-- <span class="col-md-1 ms-2 edit" *ngIf="isDisabled14">
+                  <i class="material-icons" (click)="toggleenable(14)">edit</i>
+                </span>
+                <span class="col-md-1 checks" *ngIf="!isDisabled14">
+                  <i
+                    class="material-icons text-danger"
+                    (click)="toggledisable(14)"
+                    >close</i
+                  >
+                  <i class="material-icons text-success">check</i>
+                </span> -->
+              </div>
+            </div>
+            <!-- <div class="d-flex flex-row col-md-4 col-4">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <input
+                      type="text"
+                      class="input-font-w"
+                      id="txtFiche6"
+                      #txtFiche15
+                      pInputText
+                      placeholder="Weight"
+                      formControlName="fcweight"
+                      [disabled]="isDisabled15"
+                      autocomplete="off"
+                      maxlength="10"
+                    />
+                    <label for="inputtext">Weight</label>
+                  </span>
+                </div>
+              </div>
+              <span class="col-md-1 ms-2 edit" *ngIf="isDisabled15">
+                <i class="material-icons" (click)="toggleenable(15)">edit</i>
+              </span>
+              <span class="col-md-1 checks" *ngIf="!isDisabled15">
+                <i class="material-icons text-danger" (click)="toggledisable(15)"
+                  >close</i
+                >
+                <i class="material-icons text-success">check</i>
+              </span>
+            </div> -->
+            <div class="field col-md-4 col-4">
+              <div class="p-inputgroup d-flex flex-row">
+                <div class="mb-1 col-md-8 col-8">
+                  <div class="p-col-12 p-md-4">
+                    <span class="p-float-label">
+                      <input
+                        type="text"
+                        class="input-font-w"
+                        id="txtFiche6"
+                        #txtFiche15
+                        pInputText
+                        placeholder="Weight"
+                        formControlName="fcweight"
+                        [disabled]="isDisabled15"
+                        autocomplete="off"
+                        maxlength="10"
+                      />
+                      <label for="inputtext">Weight</label>
+                      <span class="p-inputgroup-addon">kg</span>
+                    </span>
+                  </div>
+                </div>
+                <!-- <span class="col-md-1 ms-2 edit" *ngIf="isDisabled14">
+                  <i class="material-icons" (click)="toggleenable(14)">edit</i>
+                </span>
+                <span class="col-md-1 checks" *ngIf="!isDisabled14">
+                  <i
+                    class="material-icons text-danger"
+                    (click)="toggledisable(14)"
+                    >close</i
+                  >
+                  <i class="material-icons text-success">check</i>
+                </span> -->
+              </div>
+            </div>
+          </div>
+          <!-- 6th row -->
+          <div class="initials p-fluid p-grid col-md-12 col-12">
+           
+            <div class="d-flex flex-row col-md-8 col-4">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <textarea
+                      id="txtFiche4"
+                      #txtFiche17
+                      formControlName="fcspclfeat"
+                      [disabled]="isDisabled17"
+                      rows="5"
+                      cols="30"
+                      pInputTextarea
+                      maxlength="10"
+                      placeholder="ID Marks"
+                    ></textarea>
+                    <label for="txtFiche4">ID Marks</label>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="d-flex flex-row col-md-4 col-4">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <input
+                      type="text"
+                      class="input-font-w"
+                      id="txtFiche6"
+                      #txtFiche18
+                      pInputText
+                      placeholder="Languages"
+                      formControlName="fclang"
+                      [disabled]="isDisabled18"
+                      autocomplete="off"
+                      maxlength="10"
+                    />
+                    <label for="inputtext">Languages</label>
+                  </span>
+                </div>
+              </div>
+              <span class="col-md-1 ms-2 edit" *ngIf="isDisabled18">
+                <i class="material-icons" (click)="toggleenable(18)">edit</i>
+              </span>
+              <span class="col-md-1 checks" *ngIf="!isDisabled18">
+                <i
+                  class="material-icons text-danger"
+                  (click)="toggledisable(18)"
+                  >close</i
+                >
+                <i class="material-icons text-success">check</i>
+              </span>
+            </div> -->
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- Last Row -->
+    <p-toast></p-toast>
+
+    <div class="card mt-2">
+      <div class="card-body">
+        <h6 class="card-title">Language Details</h6>
+        <p-toolbar styleClass="p-mb-4">
+          <ng-template pTemplate="left">
+            <button
+              pButton
+              pRipple
+              label="New"
+              icon="pi pi-plus"
+              class="p-button-success p-mr-2 ms-1"
+              (click)="openNew()"
+            ></button>
+            <button
+              pButton
+              pRipple
+              [label]="Delete"
+              icon="pi pi-trash"
+              class="p-button-danger ms-3"
+              (click)="deleteSelectedProducts()"
+              [disabled]="!selectedProducts || !selectedProducts.length"
+            ></button>
+          </ng-template>
+        </p-toolbar>
+        <div class="table-container d-none d-md-block">
+          <p-table
+            #dt
+            [value]="products"
+            [rows]="10"
+            [paginator]="true"
+            [globalFilterFields]="[
+              'name',
+              'country.name',
+              'representative.name',
+              'status'
+            ]"
+            [(selection)]="selectedProducts"
+            [rowHover]="true"
+            dataKey="id"
+            currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+            [showCurrentPageReport]="true"
+          >
+            <ng-template pTemplate="header">
+              <tr>
+                <th style="width: 3rem">
+                  <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+                </th>
+                <th pSortableColumn="Language">Language</th>
+                <th pSortableColumn="Ability">Ability</th>
+                <th></th>
+              </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-product>
+              <tr>
+                <td>
+                  <p-tableCheckbox [value]="product"></p-tableCheckbox>
+                </td>
+                <td>
+                  {{ product.name.name ? product.name.name : product.name }}
+                </td>
+                <td>{{ product.ability }}</td>
+                <td>
+                  <button
+                    pButton
+                    pRipple
+                    icon="pi pi-pencil"
+                    class="p-button-rounded p-button-success p-mr-2"
+                    (click)="editProduct(product)"
+                  ></button>
+                  <button
+                    pButton
+                    pRipple
+                    icon="pi pi-trash"
+                    class="p-button-rounded p-button-warning"
+                    (click)="deleteProduct(product)"
+                  ></button>
+                </td>
+              </tr>
+            </ng-template>
+          </p-table>
+        </div>
+        <!-- Card Layout (visible for small screens) -->
+        <div class="card-container d-md-none">
+          <div *ngFor="let product of products" class="card mb-3">
+            <div class="card-body">
+              <h5 class="card-title">
+                {{ product.name.name ? product.name.name : product.name }}
+              </h5>
+              <p class="card-text">Ability: {{ product.ability }}</p>
+              <button
+                pButton
+                pRipple
+                icon="pi pi-pencil"
+                class="p-button-rounded p-button-success p-mr-2"
+                (click)="editProduct(product)"
+              ></button>
+              <button
+                pButton
+                pRipple
+                icon="pi pi-trash"
+                class="p-button-rounded p-button-warning"
+                (click)="deleteProduct(product)"
+              ></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 mt-2 text-end">
+      <button
+          type="submit"
+          class="btn btn-success"
+          (click)="openDialog()"
+        >
+          Change Request.
+        </button>
+    </div>
+  </div>
+  <p-dialog
+    [(visible)]="productDialog"
+    [appendTo]="'body'"
+    [style]="{ width: '450px', 'z-index': '999' }"
+    header="Language Details"
+    [modal]="true"
+    styleClass="p-fluid"
+  >
+    <ng-template pTemplate="content">
+      <div class="p-field">
+        <label for="language">Language</label>
+
+        <p-dropdown
+          [appendTo]="'body'"
+          inputId="dropdown"
+          [autoDisplayFirst]="false"
+          [options]="languages"
+          optionLabel="name"
+          [(ngModel)]="product.name"
+        ></p-dropdown>
+        <small class="p-invalid" *ngIf="submitted && !product.name"
+          >Language is required.</small
+        >
+      </div>
+
+      <div class="p-field">
+        <label class="p-mb-3 mt-2">Ability</label>
+        <div class="p-formgrid p-grid row col-12 mt-2">
+          <div class="field-checkbox col-3">
+            <p-checkbox
+              name="group1"
+              value="Read"
+              [(ngModel)]="product.ability"
+              inputId="ny"
+            ></p-checkbox>
+            <label for="ny" class="ms-1">Read</label>
+          </div>
+          <div class="field-checkbox col-3">
+            <p-checkbox
+              name="group1"
+              value="Write"
+              [(ngModel)]="product.ability"
+              inputId="sf"
+            ></p-checkbox>
+            <label for="sf" class="ms-1">Write</label>
+          </div>
+          <div class="field-checkbox col-3">
+            <p-checkbox
+              name="group1"
+              value="Speak"
+              [(ngModel)]="product.ability"
+              inputId="la"
+            ></p-checkbox>
+            <label for="la" class="ms-1">Speak</label>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+
+    <ng-template pTemplate="footer">
+      <button
+        pButton
+        pRipple
+        label="Cancel"
+        icon="pi pi-times"
+        class="p-button-text"
+        (click)="hideDialog()"
+      ></button>
+      <button
+        pButton
+        pRipple
+        label="Save"
+        icon="pi pi-check"
+        class="p-button-text"
+        (click)="saveProduct()"
+      ></button>
+    </ng-template>
+  </p-dialog>
+
+  <p-confirmDialog
+    [style]="{ width: '450px', 'z-index': '999' }"
+    [appendTo]="'body'"
+  ></p-confirmDialog>
+</div>

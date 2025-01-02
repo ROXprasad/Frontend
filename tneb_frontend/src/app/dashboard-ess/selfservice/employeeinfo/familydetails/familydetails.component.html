@@ -1,0 +1,171 @@
+<div class="container py-2">
+  <div class="" style="width: 100%">
+    <div class="card mt-2" *ngFor="let edu of FamilyForm; let i = index">
+      <div class="card-body">
+        <h6 class="card-title">Family Details - {{ edu.familymember_description }}</h6>
+      </div>
+      <div>
+        <!-- 1st row -->
+        <div class="initials p-fluid p-grid col-md-12 col-12">
+          <div class="d-flex flex-row col-md-4 col-4">
+            <div class="mb-1 col-md-8 col-8">
+              <div class="p-field p-col-12 p-md-4">
+                <span class="p-float-label">
+                  <input
+                    type="text"
+                    class="input-font-w"
+                    id="txtFiche"
+                    pInputText
+                    placeholder="Relation"
+                    [(ngModel)]="edu.familymember_description"
+                    autocomplete="off"
+                    maxlength="10"
+                  />
+                  <label for="inputtext">Relation</label>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex flex-row col-md-4 col-4">
+            <div class="mb-1 col-md-8 col-8">
+              <div class="p-field p-col-12 p-md-4">
+                <span class="p-float-label">
+                  <input
+                    type="text"
+                    class="input-font-w"
+                    id="txtFiche"
+                    (input)="past($event)"
+                    #txtFiche2
+                    pInputText
+                    placeholder="First Name"
+                    [(ngModel)]="edu.personnelarea_with_description"
+                    autocomplete="off"
+                    maxlength="10"
+                  />
+                  <label for="inputtext">Name.</label>
+                </span>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="d-flex flex-row col-md-4 col-4">
+            <div class="mb-1 col-md-8 col-8">
+              <div class="p-field p-col-12 p-md-4">
+                <span class="p-float-label">
+                  <input
+                    type="text"
+                    class="input-font-w"
+                    id="txtFiche"
+                    pInputText
+                    placeholder="Last Name"
+                    [(ngModel)]="edu.lastname"
+                    autocomplete="off"
+                  />
+                  <label for="inputtext">Last Name.</label>
+                </span>
+              </div>
+            </div>
+          </div> -->
+          <div class="d-flex flex-row col-md-4 col-4">
+            <div class="mb-1 col-md-8 col-8">
+              <div class="p-field p-col-12 p-md-4">
+                <span class="p-float-label">
+                  <input
+                    type="text"
+                    class="input-font-w"
+                    id="txtFiche"
+                    placeholder="Gender"
+                    pInputText
+                    [(ngModel)]="edu.gender_description"
+                    autocomplete="off"
+                  />
+                  <label for="inputtext">Gender</label>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 2nd row -->
+        <div class="initials p-fluid p-grid col-md-12 col-12">
+         
+          <div class="d-flex flex-row col-md-4 col-4">
+            <div class="mb-1 col-md-8 col-8">
+              <div class="p-field p-col-12 p-md-4">
+                <span class="p-float-label">
+                  <p-calendar
+                  [appendTo]="'body'"
+                  dateFormat="dd-mm-yy"
+                  inputId="dateformat"
+                  [(ngModel)]="edu.birthdate"
+                  placeholder="Date of Birth"
+                ></p-calendar>
+                  <label for="inputtext">Date of Birth</label>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex flex-row col-md-4 col-4">
+            <div class="mb-1 col-md-8 col-8">
+              <div class="p-field p-col-12 p-md-4">
+                <span class="p-float-label">
+                  <input
+                    type="text"
+                    class="input-font-w"
+                    id="txtFiche"
+                    placeholder="Birth Place"
+                    pInputText
+                    [(ngModel)]="edu.birthplace"
+                    autocomplete="off"
+                  />
+                  <label for="inputtext">Birth Place</label>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex flex-row col-md-4 col-4">
+            <div class="mb-1 col-md-8 col-8">
+              <div class="p-field p-col-12 p-md-4">
+                <span class="p-float-label">
+                  <input
+                    type="text"
+                    class="input-font-w"
+                    id="txtFiche"
+                    placeholder="Country Of Birth"
+                    pInputText
+                    [(ngModel)]="edu. ctryobirth_description"
+                    autocomplete="off"
+                  />
+                  <label for="inputtext">Country Of Birth</label>
+                </span>
+              </div>
+            </div>
+          </div>
+         
+        </div>
+        <!-- 3rd row -->
+        <div class="initials p-fluid p-grid col-md-12 col-12">
+          
+         
+          <div class="d-flex flex-row col-md-4 col-4">
+            <div class="mb-1 col-md-8 col-8">
+              <div class="p-field p-col-12 p-md-4">
+                <span class="p-float-label">
+                  <input
+                    type="text"
+                    class="input-font-w"
+                    id="txtFiche"
+                    placeholder="Nationality"
+                    pInputText
+                    [(ngModel)]="edu.nationality_description"
+                    autocomplete="off"
+                  />
+                  <label for="inputtext">Nationality</label>
+                </span>
+              </div>
+            </div>
+          </div>
+       
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

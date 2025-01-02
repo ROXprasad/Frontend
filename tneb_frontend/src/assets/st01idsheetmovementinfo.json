@@ -1,0 +1,34 @@
+{
+	"data": [
+		{
+            "mvtno": "1698",
+			"idsheet": "50F5933507",
+			"mvt_type": "EA",
+			"mvt_desc": "GOODS INWARDS",
+			"direction": "I",
+			"mvt_date": "22-Aug-2020 07:58",
+			"bay": "GD",
+			"rack": "001",
+			"sheets": "11",
+			"brkg_code": "-",
+			"delivery_no": "-",
+            "userid": "R4335411",
+            "username": "Maharaja"
+        },
+        {
+            "mvtno": "1699",
+			"idsheet": "50F5933507",
+			"mvt_type": "MI",
+			"mvt_desc": "GOODS INWARDS",
+			"direction": "I",
+			"mvt_date": "22-Aug-2020 07:58",
+			"bay": "GD",
+			"rack": "001",
+			"sheets": "11",
+			"brkg_code": "-",
+			"delivery_no": "-",
+            "userid": "R4335411",
+            "username": "Maharaja"
+        }
+    ]
+}

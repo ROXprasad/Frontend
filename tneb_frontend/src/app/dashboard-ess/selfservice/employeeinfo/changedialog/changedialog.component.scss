@@ -1,0 +1,130 @@
+.base-timer__label {
+    top: 2px;
+    position: relative;
+  }
+  .time-width{
+    width: 38px;
+  }
+  .marg{
+    margin-right: 28px;
+  }
+  .fnt-size{
+    font-size: 12px;
+  }
+   .btn-color{
+    background: linear-gradient(90deg, #F2E318 10%, #36AE7C 100%);
+   }
+  .modal-container {
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1500;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;    
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+    .mins{
+      border:none;
+      background: transparent;
+      font-size: medium;
+      text-align: start;
+    }
+  
+    .modal-content {
+      background-color: #fefefe;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 40%;
+    }
+  
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+  
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  
+    .clock-style {
+      display: inline-block;
+      width: 15em;
+      text-align: left;
+      margin-bottom: 18px;
+      span {
+        padding: 0px 4px;
+      }
+    }
+    .time-in-mins {
+      font-size: 18px;
+      text-align: left;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .idle-text {
+      font-size: 10px !important;
+    }
+  }
+  //END::TIMER
+  
+  .user-margin {
+    margin-left: 5px !important;
+  }
+  
+  
+  //Animation 
+  
+  .placeholder-content {
+    height: 20px;
+    overflow: hidden;
+   // background: #000;
+    // position: relative;
+    
+    // Animation
+    animation-duration: 1.7s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-name: placeholderAnimate;
+    // background: #f6f7f8; // Fallback
+    background: linear-gradient(to right, #eee 2%, #ddd 18%, #eee 33%);
+    background-size: 1300px; // Animation Area
+    
+    &_item {
+        // width: 100%;
+        // height: 20px;
+        // position: absolute;
+        background: #fff;
+        z-index: 2;
+        
+        &:after,
+        &:before {
+            width: inherit;
+            height: inherit;
+            content: '';
+            position: absolute;
+        }
+        
+        &:nth-child(1) {
+            top: 0;
+            left: 0;
+        }           
+    }
+  }
+  .example-chip-list {
+    width: 100%;
+  }
+  @keyframes placeholderAnimate {
+    0%{ background-position: -650px 0; }
+    100%{ background-position: 650px 0; }
+  }

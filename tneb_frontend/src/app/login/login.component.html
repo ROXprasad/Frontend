@@ -1,0 +1,187 @@
+<div class="body">
+  <div class="content">
+    <div class="Login_container">
+      <div class="login-content">
+        <div class="icon">
+          <!-- <img src="/assets/imgonline-com-ua-ReplaceColor-1XEgo86UpLqSa-removebg-preview.png" /> -->
+        </div>
+        <p class="logintxt">Login</p>
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+          <div class="radio-group">
+            <label>
+              <input
+                type="radio"
+                value="Employee"
+                [checked]="selectedValue === 'Employee'"
+                (change)="changeId('EmployeeId')"
+                name="question"
+                formControlName="agree"
+              />
+              Employee
+            </label>
+            
+            <label>
+              <input
+                type="radio"
+                value="Position"
+                [checked]="selectedValue === 'Position'"
+                (change)="changeId('PositionId')"
+                name="question"
+                formControlName="agree"
+              />
+              Position
+            </label>
+            
+            <!-- <div
+              *ngIf="
+                loginForm.controls['agree'].invalid && 
+                (issubmitted || loginForm.controls['agree'].touched || loginForm.controls['agree'].dirty)
+              "
+              class="error"
+            >
+              <span class="small" *ngIf="loginForm.controls['agree'].errors?.['required']">
+                **Choose Your Position
+              </span>
+            </div> -->
+          </div>
+          
+          <div class="form-group">
+            <input
+              type="number"
+              id="name"
+              placeholder="Username"
+              formControlName="name"
+              required
+            />
+            <div
+              *ngIf="
+                loginForm.controls['name'].invalid &&
+                (issubmitted ||
+                  loginForm.controls['name'].touched ||
+                  loginForm.controls['name'].dirty)
+              "
+              class="error"
+            >
+              <span
+                class="small"
+                *ngIf="loginForm.controls['name'].errors?.['required']"
+              >
+                **Enter EmployeeId
+              </span>
+              <span
+                class="small"
+                *ngIf="loginForm.controls['name'].errors?.['pattern']"
+              >
+                **EmployeeId contain 8 numbers.
+              </span>
+            </div>
+          </div>
+          <div class="form-group position-relative">
+            <div class="input-group">
+              <input
+                [type]="showPassword ? 'text' : 'password'"
+                id="password"
+                placeholder="Password"
+                formControlName="passwords"
+                required
+              />
+              <span class="input-group-icon">
+                <i
+                  class="fa-solid"
+                  [ngClass]="showPassword ? 'fa-eye-slash' : 'fa-eye'"
+                  (click)="togglePasswordVisibility()"
+                ></i>
+              </span>
+            </div>
+
+            <div
+              *ngIf="
+                loginForm.controls['passwords'].invalid &&
+                (issubmitted ||
+                  loginForm.controls['passwords'].touched ||
+                  loginForm.controls['passwords'].dirty)
+              "
+              class="error"
+            >
+              <span
+                class="small"
+                *ngIf="loginForm.controls['passwords'].errors?.['required']"
+              >
+                **Enter Password
+              </span>
+              <small
+                class="small"
+                *ngIf="loginForm.controls['passwords'].errors?.['pattern']"
+              >
+                Password must start with a letter, contain at least one number,
+                one special character, and be 8-12 characters long.
+              </small>
+            </div>
+          </div>
+
+          <button type="submit">Login</button>
+          <div class="d-flex flex-row">
+            <div class="forgot-password me-1">
+              <a href="#" style="color: #36ae7c">Forgot Password?</a>
+            </div>
+            <div class="forgot-password ms-1" (click)="toggle()">
+              <span style="color: #36ae7c; cursor: pointer"
+                >Register here.</span
+              >
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="Img_container">
+        <div class="Img_container_size">
+          <img [src]="imagePath" class="image" lazyLoad="testImage" />
+        </div>
+      </div>
+    </div>
+    <div class="info">
+      <div class="card testimonials">
+        <div class="card-body">
+          <div class="card-title">
+            <header>
+              <strong
+                ><h6>
+                  Latest News
+                  <hr /></h6
+              ></strong>
+            </header>
+          </div>
+          <div class="card-text">
+            <!-- <div class="contents">
+              <div class="vl"></div>
+            </div> -->
+            <div class="marquee">
+              <marquee
+                width="100%"
+                direction="up"
+                onmouseover="this.stop();"
+                onmouseout="this.start();"
+              >
+                <ol *ngFor="let info of information">
+                  <div class="img">
+                    <li>
+                      <i class="fa fa-link me-2">&emsp;</i>
+                      {{ info.Value }}
+                      <span *ngIf="info.key">
+                        <img
+                          src="../../assets/new.gif"
+                          height="25px"
+                          width="25px"
+                        />
+                      </span>
+                    </li>
+                  </div>
+                </ol>
+              </marquee>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p-toast position="bottom-center" [breakpoints]="{'920px': {width: '100%'}}" key="br"></p-toast>
+</div>

@@ -1,0 +1,253 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.content {
+  height: 100vh;
+  width: 100%;
+}
+// .mat-toolbar.mat-primary {
+//   background: linear-gradient(90deg, #f2e318 40%, #5b841e 100%);
+//   color: black;
+// }
+.mat-toolbar.mat-primary {
+  background: #673ab7 !important;
+  color: #ffff !important;
+}
+.mat-drawer {
+  // width: 250px;
+  padding: 10px;
+}
+.app-main-wrapper-full {
+  height: 100vh;
+  .mat-drawer-container .mat-drawer-content {
+    height: 100vh;
+    overflow: scroll !important;
+  }
+
+  .content {
+    padding: 32px 64px;
+  }
+}
+.full-heigth {
+  height: 100%;
+}
+
+
+// scss from essdashboard
+body {
+  // font-family: circularstd, sans-serif;
+  background-image: linear-gradient(90deg, #e0e1e4 0%, #cbd7fc 100%);
+}
+
+header p {
+  font-size: 14px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+.example-container {
+  height: 100vh;
+}
+
+.active-light {
+  margin: 0 auto;
+  width: 18px;
+  height: 18px;
+  background-color: #4CBB17;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #808002 0 -1px 9px, #4CBB17 0 2px 12px;
+  -webkit-animation: blinkYellow 1s infinite;
+  -moz-animation: blinkYellow 1s infinite;
+  -ms-animation: blinkYellow 1s infinite;
+  -o-animation: blinkYellow 1s infinite;
+  animation: blinkYellow 1s infinite;
+}
+
+.non-active-light{
+  margin: 0 auto;
+  width: 18px;
+  height: 18px;
+  background-color: rgb(217, 52, 68);
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px;
+}
+
+.example-sidenav-content {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  background-color: #ffff;
+  padding: 10px;
+}
+.user-btn{
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  border: none;
+}
+.icons{
+  transform: scale(4);
+
+}
+
+.example-sidenav {
+  padding: 20px;
+  background-color: whitesmoke;
+}
+.btn_header {
+  margin-right: 10px;
+  // background: #36AE7C;
+  background: #673ab7;
+  color: #fff;
+  border: none !important;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: transform 0.3s;
+  box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.4);
+  // color: #1B1212;
+  font-size: 12px;
+}
+
+
+.btn_header:hover {
+  transform: rotate(15deg);
+  background: #90EE90;
+  /* Rotate by 360 degrees */
+}
+
+// .header_btn {
+//     float: right;
+// }
+
+// .header_container {
+//     display: flex;
+//     justify-content: space-between;
+//     padding: 10px;
+//     background: #ffff;
+// }
+
+.example-card {
+  max-width: 250px;
+  height: 130px;
+  background: #fff;
+  box-shadow: 1px 3px 12px 3px rgba(0, 0, 0, .16);
+}
+
+.example-header-image {
+  background-image: url('/assets/pngwing.com.png');
+  background-size: cover;
+}
+
+// .header_title {
+//     display: flex;
+//     align-items: center;
+// }
+
+.cart_container {
+  padding: 0px 30px 0px 30px;
+}
+
+.mat-card-image {
+  width: calc(41% + 32px) !important;
+  margin: 0 -16px 16px -16px;
+  display: block;
+  overflow: hidden;
+}
+
+.fa-bars {
+  cursor: pointer;
+}
+
+.mat-tree-node{
+  // background: linear-gradient(90deg, #F2E318 10%, #36AE7C 100%);
+  background: #673ab7;
+  color: #fff;
+  border-radius: 5px;
+  width: 210px;
+  margin-top: 4px;
+  min-height: 0px !important;
+  left: 5%;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.mat-icon-button {
+  width: 50px !important;
+}
+.icon{
+  transform: scale(1);
+  
+ }
+ .mat-icon {
+   vertical-align: middle;
+ }
+
+
+.image-container {
+  display: flex;
+}
+.innertree{
+  height:85% !important;
+  overflow: auto;
+}
+.footer{
+  position: fixed;
+}
+.mat-card-header .mat-card-title {
+  font-size: 14px !important;
+}
+@media screen and (min-width: 768px) {
+  marquee{
+    height: 80%;
+    }
+    .info-card {
+      height: 40% !important; /* Let the height be flexible on mobile */
+      padding-bottom: 10px; /* Add some bottom padding */
+    }
+    .card-body {
+      flex: 1 1 auto;
+      padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
+      color: var(--bs-card-color);
+      height: 80%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .btn_header {
+    display: none;
+  }
+  .mat-drawer-content {
+      height: calc(100vh - 60px); /* Full height minus the footer space */
+      overflow-y: auto;  /* Ensure vertical scrolling works */
+    }
+  /* Optionally, you can add custom styles for mat-menu if needed */
+  mat-menu {
+    width: 100%;
+  }
+  .footer {
+      position: absolute;
+      bottom: 300px;
+      width: 100%;
+      left: 0px;
+    }
+    .col-12.col-md-9 {
+      order: 1; /* Ensure the main content stays at the top */
+    }
+    
+    .col-12.col-md-3 {
+      order: 2; /* Info section comes after main content */
+      position: relative;
+      bottom: 0;
+    }
+  
+    /* Style adjustments for the info card */
+    .info-card {
+      height: auto; /* Let the height be flexible on mobile */
+      padding-bottom: 10px; /* Add some bottom padding */
+    }
+  
+    /* Marquee will scroll left to right on mobile view */
+    marquee {
+      direction: left; /* Make the marquee scroll from left to right */
+      font-size: 14px; /* Adjust font size for mobile */
+    }
+}

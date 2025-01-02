@@ -1,0 +1,21 @@
+@import '~@angular/material/theming';
+
+// Include the default theme styles
+@include mat-core();
+
+// Define your custom palette
+$green-primary: mat-palette($mat-green);
+$green-accent: mat-palette($mat-pink, A200, A100, A400);
+$green-warn: mat-palette($mat-red);
+
+// Create the theme
+$green-theme: mat-light-theme((
+  color: (
+    primary: $green-primary,
+    accent: $green-accent,
+    warn: $green-warn,
+  ),
+));
+
+// Include the theme styles
+@include angular-material-theme($green-theme);

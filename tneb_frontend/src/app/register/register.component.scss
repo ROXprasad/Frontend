@@ -1,0 +1,311 @@
+
+.body {
+    font-size: 12px;
+    font-family: sans-serif !important;
+}
+.mat-dialog-title h6{
+    font-size: medium;
+    font-weight: 600;
+}
+.input-group:not(.has-validation) > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu):not(.form-floating), .input-group:not(.has-validation) > .dropdown-toggle:nth-last-child(n+3), .input-group:not(.has-validation) > .form-floating:not(:last-child) > .form-control, .input-group:not(.has-validation) > .form-floating:not(:last-child) > .form-select {
+    border-radius: 5px;
+}
+input:focus, input.form-control:focus {
+
+    outline:none !important;
+    outline-width: 0 !important;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+.radio-group label {
+    font-size: 12px !important;
+}
+input[type="text"],input[type="email"],input[type="number"],input[type="password"]
+{
+    font-size:small;
+}
+.content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.Login_container {
+    position: absolute;
+    width: 50%;
+    transform: translate(0%, 0%);
+    display: flex;
+    background: #ffffff;
+    border-radius: 40px;
+    box-shadow: 1px 3px 12px 3px rgba(0, 0, 0, .30);
+}
+.info{
+    position: absolute;
+    right: 300px;
+   
+}
+.contents{
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    flex-direction: row;
+    width: 170px;
+    height: 80vh;
+    position: relative;
+    // border: 1px solid black;
+    left: 160px;
+}
+.vl {
+    // border-left: 2px dashed black;
+    height: 60vh;
+  }
+  .marquee {
+    overflow: hidden;
+    // height: 50px;
+    width: 100%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.small{
+   font-size: smaller;
+   font-weight: 600;
+}
+
+.marquee marquee {
+ 
+    position: absolute;
+    line-height: 20px;
+    height: 70%;
+}
+
+
+@keyframes scroll-left {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(-100%);
+    }
+}
+.Img_container {
+    width: 50%;
+    background: var(--custom-gradient);
+    border-radius: 130px 40px 40px 130px;
+}
+
+.login-content {
+    margin: 0 auto;
+    padding: 50px;
+    flex: 1;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 99%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #eeeeee;
+}
+.position-relative {
+    position: relative !important;
+  }
+  
+input[type="number"] {
+    width: 99%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #eeeeee;
+    margin: 0;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+button {
+    width: 99%;
+    padding: 10px;
+    background: linear-gradient(90deg, #F2E318 40%, #5B841E 100%);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .Login_container {
+        width: 80%;
+        flex-direction: column;
+        padding: 20px;
+        background-image: url('/assets/imgonline-com-ua-ReplaceColor-1XEgo86UpLqSa-removebg-preview.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 200px;
+    }
+    .login-content{
+        width:100%;
+        height: 100%;
+    }
+
+    .Img_container {
+        display: none;
+    }
+    .info{
+        display: none;
+    }
+}
+@media (min-width: 768px) and (max-width :968px) {
+    .Login_container {
+        position: absolute;
+        // left: 50%;
+        // top: 50%;
+        width: 80%;
+        transform: translate(0%, 0%);
+        display: flex;      
+        border-radius: 40px;
+        box-shadow: 1px 3px 12px 3px rgba(0, 0, 0, .30);
+    }
+    .info{
+    display:none
+    }
+    .contents{
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        width: 170px;
+        height: 100vh;
+        position: relative;
+        border: 1px solid black;
+        left: 160px;
+    }
+    .vl {
+       
+        // border-left: 2px dashed black;
+        height: 60vh;
+      } 
+}
+@media (min-width: 968px) and (max-width :1268px) {
+    .Login_container {
+        position: absolute;
+        // left: 50%;
+        // top: 50%;
+        width: 60%;
+        transform: translate(0%, 0%);
+        display: flex;
+        border-radius: 40px;
+        box-shadow: 1px 3px 12px 3px rgba(0, 0, 0, .30);
+    }
+
+    .Img_container {
+        width: 50%;
+        background: var(--custom-gradient);
+        border-radius: 130px 40px 40px 130px;
+    }
+    .info{
+      display: none;
+       
+    }
+    .contents{
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        width: 170px;
+        height: 100vh;
+        position: relative;
+        // border: 1px solid black;
+        left: 160px;
+    }
+    .vl {
+        // border-left: 2px dashed black;
+        height: 60vh;
+      } 
+}
+.radio-group label {
+    display: inline-block;
+    margin-right: 20px;
+    /* Adjust the spacing between radio buttons */
+}
+
+// .radio-group {
+//     padding: 15px;
+// }
+
+/* Optional: You can style the labels or radio buttons further if needed */
+
+.logintxt {
+    text-align: center;
+    background: linear-gradient(90deg, #F2E318 40%, #5B841E 100%);
+    padding: 7px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.Img_container_size {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    left: 76%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.forgot-password {
+    padding-bottom: 5%;
+    text-align: center;
+    margin-top: 6%;
+}
+
+.error {
+    color: red;
+    font-size: 11px;
+    font-weight: 600;
+}
+hr {
+    margin: 1rem 0;
+    color: inherit;
+    border: 0;
+    border-top: var(--bs-border-width) solid;
+    opacity: 0.25;
+    margin-top: -20px;
+}
+.fa-solid {
+    cursor: pointer;
+}
+
+.error-container {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    left: 0;
+    margin-top: 5px;
+}

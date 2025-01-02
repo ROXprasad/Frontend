@@ -1,0 +1,136 @@
+::ng-deep.mat-tab-label .mat-tab-label-content {
+  text-transform: capitalize;
+}
+.row{
+  color:#4d5d53;
+}//#57747b
+// color:#dee2e6 transparent --color palette
+::ng-deep .mat-ripple:not(:empty) {
+  font-size: small;
+  font-weight: 600;
+}
+button.mat-menu-item {
+  width: 100%;
+  font-size: small;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.user-btn{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: none;
+  }
+  .icons{
+    height: 100px;
+    width: 100px;
+    border-radius: 5%;
+  }
+  ::ng-deep mat-tab-header {
+    align-self:center !important;
+  }
+  ::ng-deep.mat-menu-panel { 
+    max-height: 250px !important;
+}
+
+.example-headers-align .mat-expansion-panel-header-description {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.example-headers-align .mat-form-field + .mat-form-field {
+  margin-left: 8px;
+}
+::ng-deep .mat-tab-label .mat-tab-label-content {
+  white-space: pre-line !important;
+}
+::ng-deep.mat-tab-label.mat-tab-label-active:not(.mat-tab-disabled),
+::ng-deep.mat-tab-label.mat-tab-label-active.cdk-keyboard-focused:not(.mat-tab-disabled) {
+  background-color: #4CAF50 !important;
+  font-weight: 700;
+  color: white;
+  opacity: 1;
+  border-bottom: none;
+}
+/* photo-upload.component.css */
+// .photo-upload-container {
+//   text-align: center;
+//   padding: 20px;
+// }
+
+input[type="file"] {
+  display: none; /* Hide the default file input button */
+}
+
+.custom-file-upload {
+  display: inline-block;
+  // padding: 10px 20px;
+  // background-color: #007bff; /* Blue color */
+  color: #007bff;
+  // border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.custom-file-upload:hover {
+  // background-color: #0056b3; /* Darker blue on hover */
+  text-decoration: underline;
+}
+.fa-upload{
+  display: inline-block;
+  // padding: 10px 20px;
+  // background-color: #007bff; /* Blue color */
+  color: #007bff;
+  // border-radius: 5px;
+  cursor: pointer;
+  font-size: larger;
+  // font-family: Arial, sans-serif;
+  text-align: center;
+}
+.imageupload{
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+  justify-content: start;
+  align-items: center;
+}
+.custom-file-upload i {
+  margin-right: 8px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+@media (min-width:768px) and (max-width: 978px) {
+  .col-5 {
+    flex: 0 0 100%;
+    width: 41.66666667%;
+}
+}
+@media (min-width:100px) and (max-width: 768px) {
+  .col-5 {
+    flex: 0 0 100%;
+    width: 41.66666667%;
+}
+}
+.mat-tab-group {
+  display: block !important; /* Override to block */
+  flex-direction: row !important; /* Override to row */
+  max-width: 100% !important; /* Maintain full width */
+}

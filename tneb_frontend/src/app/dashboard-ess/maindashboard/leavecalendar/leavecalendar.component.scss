@@ -1,0 +1,104 @@
+/* Default styles for larger screens */
+.card {
+  margin: 0px;
+  margin-top: 10px;
+  padding: 0px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-body {
+    padding: 15px;
+  }
+  ::ng-deep.fc-toolbar-chunk { 
+    text-transform: capitalize !important; 
+  }
+  /* FullCalendar responsive layout */
+  full-calendar {
+    width: 100%; /* Ensure calendar takes full width */
+    max-width: 100%; /* Prevent overflow */
+  }
+  ::ng-deep.fc.fc-theme-standard .fc-toolbar .fc-button.fc-dayGridMonth-button.fc-button-active, .fc.fc-theme-standard .fc-toolbar .fc-button.fc-timeGridWeek-button.fc-button-active, .fc.fc-theme-standard .fc-toolbar .fc-button.fc-timeGridDay-button.fc-button-active {
+    text-transform: capitalize !important;
+    border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+::ng-deep.fc.fc-theme-standard .fc-toolbar .fc-button-group .fc-button:last-child {
+  text-transform: capitalize !important;
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+::ng-deep.fc.fc-theme-standard .fc-toolbar :disabled{
+  text-transform: capitalize !important;
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+  /* Red event styling */
+}
+::ng-deep.fc.fc-theme-standard .fc-toolbar .fc-button {
+  text-transform: capitalize !important;
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+  .red-event {
+    background-color: red !important; /* Ensure the background is red */
+    color: white !important;           /* Change text color to white for contrast */
+    border-color: red !important;      /* Optional: Change the border color to red */
+  }
+  
+  .fc-event.red-event {
+    background-color: red !important;
+    color: white !important;
+  }
+  
+  ::ng-deep { /* Media query for mobile devices */
+  @media (max-width: 767px) {
+    /* Full calendar adjustments for mobile */
+   full-calendar {
+    display:block !important;
+      width: 100%; /* Full width for the calendar */
+      max-width: 100%; /* Prevent overflow */
+      font-size: 12px; /* Reduce font size if necessary for mobile */
+      .fc-view-harness {
+        flex-grow: 1;
+        position: relative;
+        height: 300px !important;
+        font-size: 08px !important;
+    }
+    .fc-header-toolbar{
+        display: flex !important;
+        flex-direction: column;
+        width: 100% !important;
+    
+    }
+    // .fc-toolbar-chunk{
+    //    padding-top: 10px !important;
+    // }
+    // .fc-toolbar-chunk:first-child .fc-button-group {
+    //    position: absolute  !important;
+    //    left:10px !important;
+    // }
+    .fc-toolbar-chunk:nth-child(1) {
+        order: 2; /* Move the first chunk to the second position */
+      }
+      .fc-toolbar-chunk:nth-child(2) {
+        order: 1; /* Move the second chunk to the first position */
+      }
+    .fc-toolbar-chunk:nth-child(2) h2{
+        font-size: larger;
+        padding-top: 5px;
+        margin-bottom: 5px;
+       }
+    // .fc-toolbar-chunk:nth-child(3) {
+    //   display: none;
+    //  }
+    // .fc-toolbar-chunk:first-child button {
+    //     position: absolute  !important;
+    //     right:0px !important;
+    //  }
+    }
+
+  }
+}

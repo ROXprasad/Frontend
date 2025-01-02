@@ -1,0 +1,278 @@
+/* Styling for the header */
+.header-title {
+  text-align: center;
+  // font-size: 1.8rem;
+  color: #57747b;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.overall {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+h2 {
+  text-align: center;
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+input[type="file"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+}
+
+input[type="file"]:hover {
+  background-color: #e0e0e0;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+p {
+  font-size: 14px;
+  text-align: center;
+}
+
+p.error-message {
+  color: red;
+  font-weight: bold;
+}
+
+p.success-message {
+  color: green;
+  font-weight: bold;
+}
+
+p.file-name {
+  color: #007bff;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+
+/* Container Styling */
+.container {
+  max-width: 600px;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+/* Bootstrap Column Adjustments */
+.row {
+  margin-bottom: 15px;
+}
+
+/* Button Styling */
+button {
+  width: 100%;
+  font-size: 1.1rem;
+}
+
+/* Media Query for extremely small screens (200px) */
+@media (max-width: 200px) {
+  .container {
+    padding: 5px;
+    max-width: 100%;
+  }
+
+  .header-title {
+    font-size: 12px;
+    text-align: left;
+  }
+
+  label {
+    font-size: 10px;
+  }
+
+  textarea {
+    font-size: 10px;
+    height: 50px;
+  }
+
+  p-dropdown {
+    font-size: 10px;
+  }
+
+  button {
+    font-size: 12px;
+  }
+}
+
+/* Responsive Design for smaller screens (mobile devices) */
+@media (max-width: 576px) {
+  .container {
+    padding: 10px;
+    max-width: 100%;
+  }
+
+  .header-title {
+    font-size: 1.5rem;
+  }
+
+  label {
+    font-size: 12px;
+  }
+
+  textarea,
+  p-dropdown {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 14px;
+  }
+}
+
+/* Regular screen sizes */
+@media (max-width: 768px) {
+  .container {
+    max-width: 100%;
+  }
+
+  .header-title {
+    font-size: 1.1rem;
+  }
+}
+input[type=file] {
+  height: auto !important;
+}
+
+
+// New Styles
+::ng-deep.mat-tab-label .mat-tab-label-content {
+  text-transform: capitalize;
+}
+.card-header {
+  background-color:transparent; 
+ }
+.row{
+  color:#4d5d53;
+}//#57747b
+// color:#dee2e6 transparent --color palette
+::ng-deep .mat-ripple:not(:empty) {
+  font-size: small;
+  font-weight: 600;
+}
+button.mat-menu-item {
+  width: 100%;
+  font-size: small;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.user-btn{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: none;
+  }
+  .icons{
+    height: 100px;
+    width: 100px;
+    border-radius: 5%;
+  }
+  ::ng-deep mat-tab-header {
+    align-self:center !important;
+  }
+  ::ng-deep.mat-menu-panel { 
+    max-height: 250px !important;
+}
+
+.example-headers-align .mat-expansion-panel-header-description {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.example-headers-align .mat-form-field + .mat-form-field {
+  margin-left: 8px;
+}
+::ng-deep .mat-tab-label .mat-tab-label-content {
+  white-space: pre-line !important;
+}
+::ng-deep.mat-tab-label.mat-tab-label-active:not(.mat-tab-disabled),
+::ng-deep.mat-tab-label.mat-tab-label-active.cdk-keyboard-focused:not(.mat-tab-disabled) {
+  background-color: #4CAF50 !important;
+  font-weight: 700;
+  color: white;
+  opacity: 1;
+  border-bottom: none;
+}
+
+@media (min-width:768px) and (max-width: 978px) {
+  .col-5 {
+    flex: 0 0 100%;
+    width: 41.66666667%;
+}
+}
+.mat-tab-group {
+  display: block !important; /* Override to block */
+  flex-direction: row !important; /* Override to row */
+  max-width: 100% !important; /* Maintain full width */
+}
+@media (max-width: 200px) {
+  .leave-application-container {
+    padding: 5px;
+  }
+
+  .leave-application-form {
+    max-width: 100%;
+    padding: 5px;
+  }
+
+  .form-group {
+    margin-bottom: 10px;
+    
+    mat-form-field {
+      width: 100%;
+      font-size: 10px; /* Decrease font size for very small screens */
+    }
+  }
+
+  button {
+    font-size: 10px;
+    padding: 5px;
+    width: 100%;
+  }
+
+  /* Adjust calendar component's size */
+  p-calendar {
+    width: 100% !important;
+    font-size: 10px; /* Reduce font size for the calendar */
+  }
+
+  /* Reduce the height of the text area for leave reason */
+  textarea {
+    font-size: 10px;
+    height: 40px;
+  }
+}

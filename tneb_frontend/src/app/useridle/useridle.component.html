@@ -1,0 +1,39 @@
+<div id="base-timer-label" class="base-timer__label idle-text">
+
+    <div class="d-flex fnt-size">
+      <div class="pe-2"><span><strong>Session will expire in</strong></span></div>
+      <div class="time-width placeholder-content"><span><strong>{{ idleTimerLeft }}</strong></span></div>
+      <div class="ms-2"><span><strong>Minutes</strong></span></div>
+    </div>
+  </div>
+  <div class="modal-container">
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <button class="mins">
+          <span class="time-in-mins"><span>Session will expire in</span> {{ secondTimerLeft }}</span>
+        </button>
+        <div class="row">
+          <div class="col col-md-12 text-right">
+            <div class="modal-footer">
+              <div>
+                <button
+                  type="button"
+                  class="btn btn-light btn-elevate btn-color mr-1"
+                  (click)="continue()"
+                >
+                  <span translate="Continue"></span></button
+                >&nbsp;
+                <button
+                  type="button"
+                  class="btn btn-danger btn-elevate"
+                  (click)="logout()"
+                >
+                  <span translate="Logout"></span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

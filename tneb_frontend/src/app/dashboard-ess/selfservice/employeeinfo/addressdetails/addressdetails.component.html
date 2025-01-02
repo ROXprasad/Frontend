@@ -1,0 +1,227 @@
+<div class="container py-2">
+    <div class="" style="width: 100%">
+      <div class="card mt-2" *ngFor="let edu of addressform; let i = index">
+        <div class="card-body">
+          <h6 class="card-title">{{edu.addresstype_description}}</h6>
+        </div>
+        <div>
+          <!-- 1st row -->
+          <div class="initials p-fluid p-grid col-md-12 col-12">
+            <div class="d-flex flex-row col-md-4 col-4">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <input
+                    type="text"
+                    class="input-font-w"
+                    id="txtFiche"
+                    pInputText
+                    placeholder="Care Of."
+                    [(ngModel)]="edu.careof"
+                    autocomplete="off"
+                  />
+                    <label for="inputtext">Care Of.</label>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex flex-row col-md-4 col-4">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <input
+                      type="text"
+                      class="input-font-w"
+                      id="txtFiche"
+                      pInputText
+                      placeholder="1st Address line"
+                      [(ngModel)]="edu.streethouse"
+                      autocomplete="off"
+                    />
+                    <label for="inputtext">1st Address line</label>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex flex-row col-md-4 col-4">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <input
+                    type="text"
+                    class="input-font-w"
+                    id="txtFiche"
+                    placeholder="2nd Address Line"
+                    pInputText
+                    [(ngModel)]="edu.secondaddline"
+                    autocomplete="off"
+                  />
+                    <label for="inputtext">2nd Address Line</label>
+                  </span>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+          <!-- 2nd row -->
+          <div class="initials p-fluid p-grid col-md-12 col-12">
+            <div class="d-flex flex-row col-md-4 col-4">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <input
+                      type="text"
+                      class="input-font-w"
+                      id="txtFiche"
+                      pInputText
+                      placeholder="City"
+                      [(ngModel)]="edu.city"
+                      autocomplete="off"
+                    />
+                    <label for="inputtext">City</label>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex flex-row col-md-4 col-4">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <input
+                      type="text"
+                      class="input-font-w"
+                      id="txtFiche"
+                      placeholder="District"
+                      pInputText
+                      [(ngModel)]="edu.district"
+                      autocomplete="off"
+                    />
+                    <label for="inputtext">District</label>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="d-flex flex-row col-md-4 col-4">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <input
+                    type="text"
+                    class="input-font-w"
+                    id="txtFiche"
+                    placeholder="Region"
+                    pInputText
+                    [(ngModel)]="edu.region"
+                    autocomplete="off"
+                  />
+                    <label for="inputtext">Region</label>
+                  </span>
+                </div>
+              </div>
+            </div> -->
+            
+            <div class="d-flex flex-row col-md-4 col-4">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <input
+                    type="text"
+                    class="input-font-w"
+                    id="txtFiche"
+                    placeholder="Region"
+                    pInputText
+                    [(ngModel)]="edu.region_description"
+                    autocomplete="off"
+                  />
+                    <label for="inputtext">Region Descp.</label>
+                  </span>
+                </div>
+              </div>
+            </div>
+           
+          </div>
+          <!-- 3rd row -->
+          <div class="initials p-fluid p-grid col-md-12 col-12">
+            
+            <div class="d-flex flex-row col-md-4 col-4">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <input
+                      type="text"
+                      class="input-font-w"
+                      id="txtFiche"
+                      placeholder="Postal Code"
+                      [(ngModel)]="edu.pcodecity"
+                      pInputText
+                      autocomplete="off"
+                    />
+                    <label for="inputtext">Postal Code</label>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex flex-row col-md-4 col-4">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <input
+                      type="text"
+                      class="input-font-w"
+                      id="txtFiche"
+                      placeholder="Country."
+                      pInputText
+                      [(ngModel)]="edu.country_description"
+                      autocomplete="off"
+                    />
+                    <label for="inputtext">Country.</label>
+                  </span>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+          <!-- 4th row -->
+          <!-- <div class="initials p-fluid p-grid col-md-12 col-12">
+            <div class="d-flex flex-row col-md-4 col-4">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <input
+                      type="text"
+                      class="input-font-w"
+                      id="txtFiche"
+                      placeholder="Challengegroup Description"
+                      pInputText
+                      [(ngModel)]="edu.challengegroup_description"
+                      autocomplete="off"
+                    />
+                    <label for="inputtext">Challengegroup Description</label>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex flex-row col-md-4 col-4">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <input
+                    type="text"
+                    class="input-font-w"
+                    id="txtFiche"
+                    placeholder="Challengetype Description"
+                    pInputText
+                    [(ngModel)]="edu.challengetype_description"
+                    autocomplete="off"
+                  />
+                  <label for="inputtext">Challengetype Description</label>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  

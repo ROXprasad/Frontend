@@ -1,0 +1,23 @@
+{{with printf "kv/%s/%s/%s/800/web" (env "PROJECT") (env "TYPE") (env "BRANCH") | secret }}
+{
+"ApplicationSettings": {
+    "SSOURL": "{{.Data.data.SSOURL}}",
+    "AUTH_URL": "{{.Data.data.AUTH_URL}}",
+    "APP_VERSION": "{{.Data.data.APP_VERSION}}",
+    "APP_ENV": "{{.Data.data.APP_ENV}}",
+    "SUITE_URL": "{{.Data.data.SUITE_URL}}",
+    "APP_ID": "{{.Data.data.APP_ID}}",
+    "DASH_AUTH_URL":"{{.Data.data.DASH_AUTH_URL}}",
+    "WHMGMT_API":"{{.Data.data.WHMGMT_API}}",
+    "QAMGMT_API":"{{.Data.data.QAMGMT_API}}",
+    "RCMGMT_API":"{{.Data.data.RCMGMT_API}}",
+    "SPMGMT_API":"{{.Data.data.SPMGMT_API}}",
+    "PDMGMT_API":"{{.Data.data.PDMGMT_API}}",
+    "IVMGMT_API":"{{.Data.data.IVMGMT_API}}",
+    "ADMGMT_API":"{{.Data.data.ADMGMT_API}}",
+    "INTFGMT_API":"{{.Data.data.INTFGMT_API}}",
+    "REPORT_API":"{{.Data.data.REPORT_API}}"
+    }
+}
+{{end}}
+

@@ -1,0 +1,271 @@
+<div class="container py-2">
+  <div class="" style="width: 100%">
+    <div class="card mt-2" *ngFor="let edu of educationform; let i = index">
+      <div class="card-body">
+        <h6 class="card-title">
+          Educational Details - {{ edu.subtype_desrciption }}
+        </h6>
+      </div>
+      <div>
+        <!-- 1st row -->
+        <div class="initials p-fluid p-grid col-md-12 col-12">
+          <div class="d-flex flex-row col-md-4 col-4">
+            <div class="mb-1 col-md-8 col-8">
+              <div class="p-field p-col-12 p-md-4">
+                <span class="p-float-label">
+                  <input
+                    type="text"
+                    class="input-font-w"
+                    id="txtFiche"
+                    pInputText
+                    placeholder="Course"
+                    [(ngModel)]="edu.subtype_desrciption"
+                    autocomplete="off"
+                    maxlength="10"
+                  />
+                  <label for="inputtext">Course</label>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex flex-row col-md-4 col-4">
+            <div class="mb-1 col-md-8 col-8">
+              <div class="p-field p-col-12 p-md-4">
+                <span class="p-float-label">
+                  <input
+                    type="text"
+                    class="input-font-w"
+                    id="txtFiche"
+                    pInputText
+                    placeholder="Degree/Std"
+                    [(ngModel)]="edu.certificate_description"
+                    autocomplete="off"
+                    maxlength="10"
+                  />
+                  <label for="inputtext">Degree/Std</label>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex flex-row col-md-4 col-4">
+            <div class="mb-1 col-md-8 col-8">
+              <div class="p-field p-col-12 p-md-4">
+                <span class="p-float-label">
+                  <input
+                    type="text"
+                    class="input-font-w"
+                    id="txtFiche"
+                    pInputText
+                    placeholder="Branch/Group"
+                    [(ngModel)]="edu.brofstudy1_description"
+                    autocomplete="off"
+                  />
+                  <label for="inputtext">Branch/Group</label>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 2nd row -->
+        <div class="initials p-fluid p-grid col-md-12 col-12">
+         
+          <div class="d-flex flex-row col-md-4 col-4">
+            <div class="mb-1 col-md-8 col-8">
+              <div class="p-field p-col-12 p-md-4">
+                <span class="p-float-label">
+                  <input
+                    type="text"
+                    class="input-font-w"
+                    id="txtFiche"
+                    placeholder="Mode of Study"
+                    pInputText
+                    [(ngModel)]="edu.eductraining_description"
+                    autocomplete="off"
+                  />
+                  <label for="inputtext">Mode of Study</label>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex flex-row col-md-4 col-4">
+            <div class="mb-1 col-md-8 col-8">
+              <div class="p-field p-col-12 p-md-4">
+                <span class="p-float-label">
+                  <input
+                    type="text"
+                    class="input-font-w"
+                    id="txtFiche"
+                    placeholder="Institute Name"
+                    pInputText
+                    [(ngModel)]="edu.instituteloc"
+                    autocomplete="off"
+                  />
+                  <label for="inputtext"> Institute Name</label>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex flex-row col-md-4 col-4">
+            <div class="mb-1 col-md-8 col-8">
+              <div class="p-field p-col-12 p-md-4">
+                <span class="p-float-label">
+                  <input
+                    type="text"
+                    class="input-font-w"
+                    id="txtFiche"
+                    placeholder="Marks/Grade"
+                    pInputText
+                    [(ngModel)]="edu.finalgrade"
+                    autocomplete="off"
+                  />
+                  <label for="inputtext">Marks/Grade</label>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 3rd row -->
+        <div class="initials p-fluid p-grid col-md-12 col-12">
+       
+         
+          <div class="d-flex flex-row col-md-4 col-4">
+            <div class="mb-1 col-md-8 col-8">
+              <div class="p-field p-col-12 p-md-4">
+                <span class="p-float-label">
+                  <input
+                    type="text"
+                    class="input-font-w"
+                    id="txtFiche"
+                    placeholder="Duration Of Course"
+                    pInputText
+                    [(ngModel)]="edu.personnelarea_with_description"
+                    autocomplete="off"
+                  />
+                  <label for="inputtext">Duration of course & Year</label>
+                </span>
+              </div>
+            </div>
+            <!-- <span class="col-md-1 ms-2 edit" *ngIf="isDisabled8">
+                    <i class="material-icons" (click)="toggleenable(8)">edit</i>
+                  </span>
+                  <span class="col-md-1 checks" *ngIf="!isDisabled8">
+                    <i class="material-icons text-danger" (click)="toggledisable(8)"
+                      >close</i
+                    >
+                    <i class="material-icons text-success">check</i>
+                  </span> -->
+          </div>
+          <!-- <div class="d-flex flex-row col-md-4 col-4">
+            <div class="mb-1 col-md-8 col-8">
+              <div class="p-field p-col-12 p-md-4">
+                <span class="p-float-label">
+                  <input
+                    type="text"
+                    class="input-font-w"
+                    id="txtFiche"
+                    #txtFiche9
+                    placeholder="Year"
+                    pInputText
+                    [(ngModel)]="edu.timeunitmeas"
+                  />
+                  <label for="inputtext">Year</label>
+                </span>
+              </div>
+            </div>
+            <span class="col-md-1 ms-2 edit" *ngIf="isDisabled9">
+                    <i class="material-icons" (click)="toggleenable(9)">edit</i>
+                  </span>
+                  <span class="col-md-1 checks" *ngIf="!isDisabled9">
+                    <i class="material-icons text-danger" (click)="toggledisable(9)"
+                      >close</i
+                    >
+                    <i class="material-icons text-success">check</i>
+            </span>
+          </div> -->
+        </div>
+      </div>
+     <div >
+      <h6 class="card-title ms-3">
+        Additional Information:
+      </h6>
+        <div class="initials p-fluid p-grid col-md-12 col-12 mt-2">
+          <div class="d-flex flex-row col-md-4 col-4">
+            <div class="mb-1 col-md-8 col-8">
+              <div class="p-field p-col-12 p-md-4">
+                <span class="p-float-label">
+                  <input
+                    type="text"
+                    class="input-font-w"
+                    id="txtFiche"
+                    placeholder="University Board"
+                    pInputText
+                    [(ngModel)]="edu.universityboard"
+                    autocomplete="off"
+                  />
+                  <label for="inputtext">University /Board</label>
+                </span>
+              </div>
+            </div>
+          </div>  
+          <div class="d-flex flex-row col-md-4 col-4">
+            <div class="mb-1 col-md-8 col-8">
+              <div class="p-field p-col-12 p-md-4">
+                <span class="p-float-label">
+                  <input
+                    type="text"
+                    class="input-font-w"
+                    id="txtFiche"
+                    placeholder="CertificateNo"
+                    pInputText
+                    [(ngModel)]="edu.certificateno"
+                    autocomplete="off"
+                  />
+                  <label for="inputtext">Certificate Number</label>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex flex-row col-md-4 col-4">
+            <div class="mb-1 col-md-8 col-8">
+              <div class="p-field p-col-12 p-md-4">
+                <span class="p-float-label">
+                  <input
+                    type="text"
+                    class="input-font-w"
+                    id="txtFiche"
+                    placeholder="Register No."
+                    pInputText
+                    [(ngModel)]="edu.registerno"
+                    autocomplete="off"
+                  />
+                  <label for="inputtext">Registeration Number</label>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="initials p-fluid p-grid col-md-12 col-12">
+          <div class="d-flex flex-row col-md-4 col-4">
+            <div class="mb-1 col-md-8 col-8">
+              <div class="p-field p-col-12 p-md-4">
+                <span class="p-float-label">
+                  <input
+                  type="text"
+                  class="input-font-w"
+                  id="txtFiche"
+                  placeholder="Month/Year of Passing"
+                  pInputText
+                  [(ngModel)]="edu.passedon"
+                  autocomplete="off"
+                />
+                  <label for="inputtext">Month/Year of Passing</label>
+                </span>
+              </div>
+            </div>
+          </div>  
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

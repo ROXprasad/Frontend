@@ -1,0 +1,155 @@
+
+{
+    "status": "Success",
+    "response": {
+      "ref1": [
+        {
+          "c_FICH": "50F1860228",
+          "origin": "G500 - SGG INDIA-MANUFACTURING",
+          "c_SITE": "G500",
+          "c_PROD": "100002",
+          "packagingDesc": null,
+          "c_EMBL": "27",
+          "cdC_P": "5",
+          "qualityCodeDesc": "5 - ",
+          "cdC_R": "5",
+          "sizecodeDesc": "T - DLF",
+          "c_PILE": "8061",
+          "packtypecodedesc": "8061 - PKU 61S",
+          "lenwid": "3660 * 2200",
+          "nB_VOL": 0,
+          "nB_VOL_INI": 60,
+          "bayrack": "OF-1",
+          "d_DEB_F": "19/Jun/2008 05:15",
+          "d_FIN_F": "19-jun-2008 05:42",
+          "status": "D - AVAILABLE",
+          "c_STA": "AVAILABLE",
+          "c_FIC_MERE": null,
+          "nB_EMB": 1,
+          "obs": "FILLER UP TO 1100MM FNR(FLAT/OMBRO);-CURVED LAMINAT  0.4  1.2  0.8",
+          "faultMarkingDesc": "0 - NONE",
+          "c_INTV": "1",
+          "c_INTP": 0,
+          "c_STRI": "L",
+          "orig": "G500",
+          "c_LIGN": "FLTA",
+          "inI_SQM": 480,
+          "avaiL_SQM": 0,
+          "inI_TONS": 2.536,
+          "avaiL_TONS": 2.536,
+          "c_FIC_MQ": "-",
+          "c_LIGN1": "FLTA",
+          "c_REL": "-",
+          "nB_EMB1": "1",
+          "c_FIC_MQ1": "-",
+          "suP_CODE": "-",
+          "c_sap": "GL01",
+          "position": "-",
+          "station": "-",
+          "racklevel": "-",
+          "stacker": null,
+          "locdesc": "OFF-LINE CUTTING",
+          "protectionDesc": "CL123",
+          "interleafDesc": "LUC",
+          "packSpacerDesc": "NONE",
+          "orientationDesc": "LONGI",
+          "productcodeDesc": null
+        }
+      ],
+      "ref2": [],
+      "ref3": [],
+      "ref4": [],
+      "ref5": [
+        {
+          "c_SAP": "1000029290",
+          "c_SAPDESC": "PLANILUX 2,10MM AF8061VEL3660*2200L0L10"
+        }
+      ],
+      "ref6": [],
+      "ref7": [],
+      "ref8": [],
+      "ref9": [],
+      "ref10": [
+        {
+          "cuttstation": "",
+          "setdate": "",
+          "setsetdate": ""
+        }
+      ],
+      "ref11": [],
+      "ref12": [],
+      "ref13": [],
+      "ref14": [
+        {
+          "msg": "test"
+        }
+      ],
+      "ref15": [
+        {
+          "protection": "1 - CL123"
+        }
+      ],
+      "ref16": [
+        {
+          "interleaf": "1 - LUC"
+        }
+      ],
+      "ref17": [
+        {
+          "packspacer": "0 - NONE"
+        }
+      ],
+      "ref18": [
+        {
+          "msg": "valid"
+        }
+      ],
+      "ref19": [],
+      "ref20": [{
+		"MvtNo" : "29748877",
+		"Fiche" : "50F3203711",
+		"MvtType" : "MI",
+		"MovementDescription" : "INTERNAL MOVEMENT",
+		"Direction" : "I",
+		"MovementDate" : "02\/Jan\/2012 06:09",
+		"Bay" : "5A",
+		"Rack" : "011",
+		"Sheets" : 14,
+		"BrkgCode" : "-",
+		"DeliveryNo" : "-",
+		"User" : "11614",
+		"UserName" : "-"
+	},
+	{
+		"MvtNo" : "29748002",
+		"Fiche" : "50F3203711",
+		"MvtType" : "MA",
+		"MovementDescription" : "CRITERIA MODIFICATION",
+		"Direction" : "I",
+		"MovementDate" : "02\/Jan\/2012 02:34",
+		"Bay" : "ON",
+		"Rack" : "001",
+		"Sheets" : 14,
+		"BrkgCode" : "-",
+		"DeliveryNo" : "-",
+		"User" : "QUAL",
+		"UserName" : "-"
+	},
+	{
+		"MvtNo" : "29747971",
+		"Fiche" : "50F3203711",
+		"MvtType" : "EF",
+		"MovementDescription" : "ON-LINE PRODUCTION",
+		"Direction" : "E",
+		"MovementDate" : "02\/Jan\/2012 02:03",
+		"Bay" : "ON",
+		"Rack" : "001",
+		"Sheets" : 14,
+		"BrkgCode" : "-",
+		"DeliveryNo" : "-",
+		"User" : "11824   ",
+		"UserName" : "-"
+	}],
+      "ref21": []
+    }
+  }

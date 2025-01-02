@@ -1,0 +1,118 @@
+<div class="container py-2">
+    <div class="" style="width: 100%">
+      <div class="card mt-2" *ngFor="let edu of FamilyForm; let i = index">
+        <div class="card-body">
+          <h6 class="card-title">Training Details</h6>
+        </div>
+        <div>
+          <!-- 1st row -->
+          <div class="initials p-fluid p-grid col-md-12 col-12">
+            <div class="d-flex flex-row col-md-6 col-6">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <input
+                      type="text"
+                      class="input-font-w"
+                      id="txtFiche"
+                      pInputText
+                      placeholder="Training"
+                      [(ngModel)]="edu.trainingDetails"
+                      autocomplete="off"
+                      maxlength="10"
+                    />
+                    <label for="inputtext">Training details</label>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex flex-row col-md-6 col-6">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <p-calendar
+                    [appendTo]="'body'"
+                    dateFormat="dd-mm-yy"
+                    inputId="dateformat"
+                    id="txtFiche5"
+                    #txtFiche5
+                    [(ngModel)]="edu.startDate1"
+                    placeholder="Start Date"
+                  ></p-calendar>
+                    <label for="inputtext">Traning start date</label>
+                  </span>
+                </div>
+              </div>
+            </div>
+          
+          </div>
+           <!-- 2nd row -->
+           <div class="initials p-fluid p-grid col-md-12 col-12">
+            <div class="d-flex flex-row col-md-6 col-6">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <p-calendar
+                    [appendTo]="'body'"
+                    dateFormat="mm-dd-yy"
+                    inputId="dateformat"
+                    id="txtFiche5"
+                    #txtFiche5
+                    [(ngModel)]="edu.endDate1"
+                    placeholder="End Date"></p-calendar>
+                    
+                    <label for="inputtext">Traning end  date</label>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex flex-row col-md-6 col-6">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <input
+                    type="text"
+                    class="input-font-w"
+                    id="txtFiche"
+                    pInputText
+                    placeholder="Venue Details"
+                    [(ngModel)]="edu.venueDetails"
+                    autocomplete="off"
+                    maxlength="10"
+                  />
+                    <label for="inputtext">Venue detail</label>
+                  </span>
+                </div>
+              </div>
+            </div>
+          
+          </div>
+        <!-- 3rd row -->
+        <!-- <div class="initials p-fluid p-grid col-md-12 col-12">
+       
+          <div class="d-flex flex-row col-md-6 col-6">
+            <div class="mb-1 col-md-8 col-8">
+              <div class="p-field p-col-12 p-md-4">
+                <span class="p-float-label">
+                  <input
+                  type="text"
+                  class="input-font-w"
+                  id="txtFiche"
+                  pInputText
+                  placeholder="Time"
+                  [(ngModel)]="edu.time"
+                  autocomplete="off"
+                />
+                  <label for="inputtext">Don’t need to populate</label>
+                </span>
+              </div>
+            </div>
+          </div>
+        
+        </div> -->
+         
+        </div>
+      </div>
+    </div>
+  </div>
+  

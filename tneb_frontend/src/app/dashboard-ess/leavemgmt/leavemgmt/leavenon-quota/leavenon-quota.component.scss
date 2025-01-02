@@ -1,0 +1,127 @@
+.widget-container {
+  display: flex;
+  justify-content: space-between; /* Ensures space between elements */
+  margin-bottom: 15px; /* Optional, adds spacing between widget items */
+}
+
+.widget {
+  background-color: #fff;
+   color: #4d5d53;
+  border-radius: 5px;
+  margin: 10px;
+  box-shadow: 5px 5px 5px #939393;
+  display: flex;
+  flex-direction: column; 
+  padding: 20px;
+  width: 100%; 
+  max-width: 300px; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1;
+}
+.widget:hover{
+  background-image: linear-gradient(to bottom, #f2e318 0%, #5b841e 50%);
+  color: white;
+  transform: translateY(-10px);  
+  z-index: 10;  
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);  
+}
+.widget:hover .icon i {
+  color: yellow;
+  transform: scale(1.8);  
+  transition: all 0.3s ease-in-out;  
+  background: transparent;
+}
+@media (max-width: 767px) {
+  .widget:hover .icon i {
+    transform: scale(1.2);  /* Apply smaller scale on mobile */
+  }
+  
+}
+/* Applying linear gradient to text with compatibility for background-clip */
+// .gradient-text {
+//   font-size: 32px;
+//   font-weight: bold;
+//   background-image: linear-gradient(to bottom, #f2e318 0%, #5b841e 50%);
+//   background-clip: text;
+//   -webkit-background-clip: text;
+//   color: transparent; 
+// }
+
+.icon {
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  text-align: center;
+  margin-right: 15px;
+  // border: 1px solid black;
+  border-radius: 150%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(to bottom, #f2e318 0%, #5b841e 50%);
+  color:#f2e318;
+}
+
+.value {
+  flex: 1; /* Makes sure the value section takes the remaining space */
+  display: flex;
+  flex-direction: column; /* Stack value elements vertically */
+  align-items: flex-start;
+  padding-left: 15px;
+}
+
+.value .top {
+  font-size: smaller !important;
+  font-weight: 700;
+}
+
+.value .bottom {
+  font-size: smaller !important;
+  margin-bottom: 5px; /* Space between value rows */
+  font-weight: 700;
+}
+
+.header {
+  font-size: 15px !important;
+  text-align: left; /* Align header text to the left */
+  margin-bottom: 10px; /* Adds space below the header */
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/* Media Queries for responsiveness */
+@media only screen and (max-width: 1600px) {
+  .widget {
+    width: 300px;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .widget-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    justify-content: center;
+}
+}
+
+@media only screen and (max-width: 1500px) {
+  .widget {
+    width: 275px;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .widget {
+    width: 250px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .widget {
+    width: 225px;
+  }
+  .icon {
+    font-size: 45px;
+  }
+}
+

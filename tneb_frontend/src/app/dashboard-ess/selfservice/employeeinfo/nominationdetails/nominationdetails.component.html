@@ -1,0 +1,166 @@
+<div class="container py-2">
+    <div class="" style="width: 100%">
+      <div class="card mt-2" *ngFor="let edu of FamilyForm; let i = index">
+        <div class="card-body">
+          <h6 class="card-title">Nominee Details - {{ edu.benefitType }}</h6>
+        </div>
+        <div>
+          <!-- 1st row -->
+          <div class="initials p-fluid p-grid col-md-12 col-12">
+            <div class="d-flex flex-row col-md-4 col-4">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <input
+                      type="text"
+                      class="input-font-w"
+                      id="txtFiche"
+                      pInputText
+                      placeholder="Benefit Type Desc."
+                      [(ngModel)]="edu.benefitType_with_description"
+                      autocomplete="off"
+                      maxlength="10"
+                    />
+                    <label for="inputtext">Benefit Type Desc.</label>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex flex-row col-md-4 col-4">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <input
+                      type="text"
+                      class="input-font-w"
+                      id="txtFiche"
+                      pInputText
+                      placeholder="Nominee Name"
+                      [(ngModel)]="edu.nomName"
+                      autocomplete="off"
+                      maxlength="10"
+                    />
+                    <label for="inputtext">Nominee Name.</label>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex flex-row col-md-4 col-4">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <input
+                      type="text"
+                      class="input-font-w"
+                      id="txtFiche"
+                      pInputText
+                      placeholder="Nominee Address"
+                      [(ngModel)]="edu.nomaddress1"
+                      autocomplete="off"
+                    />
+                    <label for="inputtext">Nominee Address.</label>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 2nd row -->
+          <div class="initials p-fluid p-grid col-md-12 col-12">
+            <div class="d-flex flex-row col-md-4 col-4">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <input
+                      type="text"
+                      class="input-font-w"
+                      id="txtFiche"
+                      placeholder="Relationship"
+                      pInputText
+                      [(ngModel)]="edu.relationship1"
+                      autocomplete="off"
+                    />
+                    <label for="inputtext">Relationship</label>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex flex-row col-md-4 col-4">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <p-calendar
+                    [appendTo]="'body'"
+                    dateFormat="dd-mm-yy"
+                    inputId="dateformat"
+                    [(ngModel)]="edu.birthDate1"
+                    placeholder="Birth Date"
+                  ></p-calendar>
+                    <label for="inputtext">Birth Date</label>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex flex-row col-md-4 col-4">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <input
+                      type="text"
+                      class="input-font-w"
+                      id="txtFiche"
+                      placeholder="Share Percent"
+                      pInputText
+                      [(ngModel)]="edu.sharePercnt1"
+                      autocomplete="off"
+                    />
+                    <label for="inputtext">Share Percent</label>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 3rd row -->
+          <div class="initials p-fluid p-grid col-md-12 col-12">
+            <div class="d-flex flex-row col-md-4 col-4">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <input
+                    type="text"
+                    class="input-font-w"
+                    id="txtFiche"
+                    placeholder="Guardian Address"
+                    pInputText
+                    [(ngModel)]="edu.guardianAddr1"
+                    autocomplete="off"
+                  />
+                    <label for="inputtext">Guardian Address</label>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex flex-row col-md-4 col-4">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <input
+                      type="text"
+                      class="input-font-w"
+                      id="txtFiche"
+                      placeholder="Birth City"
+                      pInputText
+                      [(ngModel)]="edu.nationality_description"
+                      autocomplete="off"
+                    />
+                    <label for="inputtext">Nationality Description</label>
+                  </span>
+                </div>
+              </div>
+            </div>
+         
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

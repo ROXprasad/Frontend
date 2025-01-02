@@ -1,0 +1,345 @@
+
+// /* Weather Card Layout Customization */
+
+// @media (min-width: 870px) {
+//     .card-control-section.basic_card_layout .col-xs-6.col-sm-6.col-lg-6.col-md-6 {
+//         width: 50%;
+//     }
+
+//     .card-control-section.basic_card_layout .card-layout {
+//         max-width: 100%;
+//         display: flex;
+//         justify-content: center;
+//         margin-top: 3%;
+//     }
+// }
+
+// /* Flip card Customization */
+
+// .card-control-section.flip_card_layout #card_flip.e-card .e-front .e-card-header-caption .e-card-header-title,
+// .card-control-section.flip_card_layout #card_flip.e-card .e-front .e-card-header-caption .e-card-sub-title,
+// .card-control-section.flip_card_layout #card_flip.e-card .e-card-actions button,
+// .card-control-section.flip_card_layout #card_flip_profile.e-card .e-card-actions button {
+//     color: #000;
+// }
+
+// .highcontrast .card-control-section.flip_card_layout #card_flip_profile.e-card .e-card-front.e-front .e-card-header-caption .e-card-header-title,
+// .highcontrast .card-control-section.flip_card_layout #card_flip_profile.e-card .e-card-front.e-front .e-card-header-caption .e-card-sub-title {
+//     color: #fff;
+// }
+
+// .tile_layout.card-control-section .col-xs-6.col-sm-6.col-lg-6.col-md-6 {
+//     width: 100%;
+//     padding: 10px;
+// }
+
+// .card-control-section.tile_layout .e-card-layout {
+//     margin: auto;
+//     max-width: 190px;
+// }
+
+// #source_link {
+//     float: right;
+//     margin-right: 10px;
+// }
+
+// @media screen and (max-width: 768px) {
+//     #source_link {
+//         margin-right: 0px;
+//     }
+// }
+
+// @media (min-width: 960px) {
+//     .tile_layout.card-control-section .col-xs-6.col-sm-6.col-lg-6.col-md-6 {
+//         width: 25%;
+//     }
+
+//     .card-control-section.tile_layout .e-card-layout {
+//         max-width: 850px;
+//     }
+// }
+
+// @media (min-width: 540px) {
+//     .tile_layout.card-control-section .row.filter {
+//         display: flex
+//     }
+
+//     .tile_layout.card-control-section .e-card .e-card-content {
+//         min-height: 170px;
+//         max-height: 170px;
+//     }
+// }
+
+// @media (max-width: 960px) and (min-width: 540px) {
+//     .tile_layout.card-control-section .col-xs-6.col-sm-6.col-lg-6.col-md-6 {
+//         width: 50%;
+//     }
+
+//     .card-control-section.tile_layout .e-card-layout {
+//         max-width: 410px;
+//     }
+// }
+
+// @media (min-width: 870px) {
+//     .card-control-section.vertical_card_layout .col-xs-6.col-sm-6.col-lg-6.col-md-6 {
+//         width: 50%;
+//     }
+
+//     .card-control-section.vertical_card_layout .card-layout {
+//         max-width: 870px;
+//     }
+// }
+
+// .e-card {
+//     box-shadow: 1px 3px 12px 3px rgba(0, 0, 0, .16);
+//     border-radius: 7px;
+// }
+
+// .e-card .e-card-header .e-card-header-caption .e-card-header-title {
+//     font-size: 18px !important;
+// }
+
+
+// .responsive-form {
+//     display: flex;
+//     flex-direction: column;
+// }
+
+// .responsive-form h2 {
+//     margin-bottom: 20px;
+//     text-align: center;
+// }
+
+// .form-group {
+//     margin-bottom: 15px;
+// }
+
+// .form-group input,
+// .form-group textarea {
+//     width: 100%;
+//     padding: 10px;
+//     border: 1px solid #ccc;
+//     border-radius: 5px;
+// }
+
+// .form-group input {
+//     margin-bottom: 10px;
+// }
+
+// .form-group input:last-child {
+//     margin-bottom: 0;
+// }
+
+
+
+// button:hover {
+//     background-color: #0056b3;
+// }
+
+// @media (min-width: 601px) {
+//     .form-group {
+//         display: flex;
+//         justify-content: space-between;
+//     }
+
+//     .form-group input {
+//         width: calc(24% - 5px);
+//         margin-bottom: 0;
+//     }
+// }
+
+// @media (max-width: 600px) {
+//     .container {
+//         padding: 15px;
+//     }
+
+//     .form-group input {
+//         width: 100%;
+//         margin-bottom: 10px;
+//     }
+// }
+
+// .sub_btn {
+//     width: 10%;
+//     position: relative;
+//     left: 90%;
+//     padding: 10px 15px;
+//     border: none;
+//     border-radius: 5px;
+//     background: linear-gradient(90deg, #F2E318 30%, #36AE7C 100%);
+//     color: black;
+//     cursor: pointer;
+//     transition: background-color 0.3s ease;
+//     margin-top: 2%;
+// }
+
+// .container {
+//     width: 95%;
+//     margin-top: 2%;
+//     height: auto;
+//     background: white;
+//     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+//     border-radius: 10px;
+//     flex-direction: column;
+//     padding: 10px;
+// }
+
+
+// .scroll-container {
+//     max-height: 500px;
+//     /* Adjust as needed */
+//     overflow-y: scroll;
+//     /* Enable vertical scrolling */
+//     -ms-overflow-style: none !important;
+//     /* Hide scrollbar in Internet Explorer and Edge */
+//     scrollbar-width: none !important;
+//     /* Hide scrollbar in Firefox */
+//     background: white;
+// }
+
+// /* Custom Scrollbar for WebKit browsers */
+// .scroll-container::-webkit-scrollbar {
+//     width: 12px;
+//     display: none;
+// }
+
+// .scroll-container::-webkit-scrollbar-track {
+//     background: #f1f1f1;
+//     border-radius: 10px;
+// }
+
+// .scroll-container::-webkit-scrollbar-thumb {
+//     background: #888;
+//     border-radius: 10px;
+//     border: 2px solid #f1f1f1;
+// }
+
+// .scroll-container::-webkit-scrollbar-thumb:hover {
+//     background: #555;
+// }
+
+// /* Custom Scrollbar for Firefox */
+// .scroll-container {
+//     scrollbar-width: thin;
+//     scrollbar-color: #888 #f1f1f1;
+// }
+
+// .scroll-container:focus {
+//     outline: none;
+//     /* Remove focus outline */
+// }
+
+// .btn_arrow {
+//     position: fixed;
+//     display: flex;
+//     left: 95%;
+//     top: 90%;
+//     border-radius: 50px;
+//     font-size: 0px;
+//     border: none;
+//     background: linear-gradient(90deg, #F2E318 30%, #36AE7C 100%);
+//     padding: 13px;
+// }
+
+// .btn_arrow:hover {
+//     background: #90EE90;
+// }
+
+
+// .btn_arrow_Up {
+//     position: fixed;
+//     display: flex;
+//     left: 95%;
+//     top: 15%;
+//     border-radius: 50px;
+//     font-size: 0px;
+//     border: none;
+//     background: linear-gradient(90deg, #F2E318 30%, #36AE7C 100%);
+//     padding: 13px;
+// }
+
+
+// .btn_arrow_Up:hover {
+//     background: #90EE90;
+// }
+
+
+// .user_title {
+//     font-size: 22px;
+//     font-weight: 500;
+//     padding: 20px;
+// }
+
+// .Img_profile {
+//     width: 230px;
+//     height: 200px;
+// }
+
+// .img-container {
+//     width: 30%;
+// }
+
+// .form_con {
+//     width: 70%;
+// }
+
+// .input_custom{
+//     width:calc(32% - 5px) !important;
+// }
+
+// .input_flex{
+//     display: flex;
+//     justify-content: space-between;
+//     margin-top: 3%;
+// }
+
+
+
+// .btn_header {
+//     margin-right: 10px;
+//     // background: #36AE7C;
+//     background: linear-gradient(90deg, #F2E318 30%, #36AE7C 100%);
+//     border: 1px solid #F2E318;
+//     border-radius: 3px;
+//     cursor: pointer;
+//     transition: transform 0.3s;
+//     box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.4);
+//     color: #1B1212;
+//     font-size: 12px;
+// }
+
+// .btn_header:hover {
+//     transform: rotate(15deg);
+//     background: #90EE90;
+//     /* Rotate by 360 degrees */
+// }
+
+// .header_btn {
+//     float: right;
+// }
+
+// .header_container {
+//     display: flex;
+//     justify-content: space-between;
+//     padding: 10px;
+//     background: #ffff;
+// }
+
+// .example-header-image {
+//     background-image: url('/assets/pngwing.com.png');
+//     background-size: cover;
+// }
+
+// .header_title {
+//     display: flex;
+//     align-items: center;
+// }
+
+
+// .mat-icon-button {
+//     width: 50px !important;
+// }
+
+// .image-container {
+//     display: flex;
+// }

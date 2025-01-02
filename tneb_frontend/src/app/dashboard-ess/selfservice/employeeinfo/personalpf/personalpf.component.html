@@ -1,0 +1,58 @@
+<div class="container py-2">
+    <div class="" style="width: 100%">
+      <div class="card mt-2" *ngFor="let edu of FamilyForm; let i = index">
+        <div class="card-body">
+          <h6 class="card-title">Personal PF Details</h6>
+        </div>
+        <div>
+          <!-- 1st row -->
+          <div class="initials p-fluid p-grid col-md-12 col-12">
+            <div class="d-flex flex-row col-md-6 col-6">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <input
+                      type="text"
+                      class="input-font-w"
+                      id="txtFiche"
+                      pInputText
+                      placeholder="PF Descp."
+                      [(ngModel)]="edu.pfTrust_Description"
+                      autocomplete="off"
+                      maxlength="10"
+                    />
+                    <label for="inputtext">GCF/CPS</label>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex flex-row col-md-6 col-6">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <input
+                      type="text"
+                      class="input-font-w"
+                      id="txtFiche"
+                      (input)="past($event)"
+                      #txtFiche2
+                      pInputText
+                      placeholder="Employee PF No."
+                      [(ngModel)]="edu.employeePFNumber2"
+                      autocomplete="off"
+                      
+                    />
+                    <label for="inputtext">GCF/CPS number</label>
+                  </span>
+                </div>
+              </div>
+            </div>
+          
+          </div>
+       
+         
+        </div>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,303 @@
+<div class="container py-2">
+    <div class="" style="width: 100%">
+      <div class="card mt-2" *ngFor="let edu of EmployeeorgForm; let i = index">
+        <div class="card-body">
+          <h6 class="card-title">Organization Details - {{ i + 1 }}</h6>
+        </div>
+        <div>
+          <!-- 1st row -->
+          <div class="initials p-fluid p-grid col-md-12 col-12">
+            <!-- <div class="d-flex flex-row col-md-6 col-6">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <input
+                      type="text"
+                      class="input-font-w"
+                      id="txtFiche"
+                      pInputText
+                      placeholder="Company Desc."
+                      [(ngModel)]="edu.companycode_description"
+                      autocomplete="off"
+                      maxlength="10"
+                    />
+                    <label for="inputtext">Company Desc.</label>
+                  </span>
+                </div>
+              </div>
+            </div> -->
+            <!-- <div class="d-flex flex-row col-md-4 col-4">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <input
+                      type="text"
+                      class="input-font-w"
+                      id="txtFiche"
+                      pInputText
+                      placeholder="Company Description"
+                      [(ngModel)]="edu.companycode_description"
+                      autocomplete="off"
+                      maxlength="10"
+                    />
+                    <label for="inputtext">Company Description</label>
+                  </span>
+                </div>
+              </div>
+            </div> -->
+            <div class="d-flex flex-row col-md-6 col-6">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <input
+                    type="text"
+                    class="input-font-w"
+                    id="txtFiche"
+                    pInputText
+                    placeholder="Circle"
+                    [(ngModel)]="edu.personnelarea_with_description"
+                    autocomplete="off"
+                    maxlength="10"
+                  />
+                  <label for="inputtext">Circle</label>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex flex-row col-md-6 col-6">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <input
+                    type="text"
+                    class="input-font-w"
+                    id="txtFiche"
+                    pInputText
+                    placeholder="Division"
+                    [(ngModel)]="edu.payrollarea_with_description"
+                    autocomplete="off"
+                  />
+                  <label for="inputtext">Division</label>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 2nd row -->
+          <div class="initials p-fluid p-grid col-md-12 col-12">
+            <!-- <div class="d-flex flex-row col-md-4 col-4">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <input
+                    type="text"
+                    class="input-font-w"
+                    id="txtFiche"
+                    pInputText
+                    placeholder="Personal Area Descp."
+                    [(ngModel)]="edu.personnelarea_description"
+                    autocomplete="off"
+                    maxlength="10"
+                  />
+                  <label for="inputtext">Personal Area Descp.</label>
+                  </span>
+                </div>
+              </div>
+            </div> -->
+            <div class="d-flex flex-row col-md-6 col-6">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <input
+                    type="text"
+                    class="input-font-w"
+                    id="txtFiche"
+                    pInputText
+                    placeholder="Employee Type"
+                    [(ngModel)]="edu.eegroup_with_description"
+                    autocomplete="off"
+                  />
+                  <label for="inputtext">Employee Type</label>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex flex-row col-md-6 col-6">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <input
+                      type="text"
+                      class="input-font-w"
+                      id="txtFiche"
+                      pInputText
+                      placeholder="Employee Class"
+                      [(ngModel)]="edu.eesubgroup_with_description"
+                      autocomplete="off"
+                    />
+                    <label for="inputtext">Employee Class</label>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 3rd row -->
+          <div class="initials p-fluid p-grid col-md-12 col-12">
+            <!-- <div class="d-flex flex-row col-md-6 col-6">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <input
+                    type="text"
+                    class="input-font-w"
+                    id="txtFiche"
+                    pInputText
+                    placeholder="Pre Sub Area Desc."
+                    [(ngModel)]="edu.perssubarea_with_description"
+                    autocomplete="off"
+                  />
+                  <label for="inputtext">Pre Sub Area Desc.</label>
+                  </span>
+                </div>
+              </div>
+            </div> -->
+            <div class="d-flex flex-row col-md-6 col-6">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <input
+                    type="text"
+                    class="input-font-w"
+                    id="txtFiche"
+                    pInputText
+                    placeholder="Designation"
+                    [(ngModel)]="edu.position_with_description"
+                    autocomplete="off"
+                  />
+                  <label for="inputtext">Designation</label>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="d-flex flex-row col-md-4 col-4">
+                <div class="mb-1 col-md-8 col-8">
+                  <div class="p-field p-col-12 p-md-4">
+                    <span class="p-float-label">
+                        <input
+                        type="text"
+                        class="input-font-w"
+                        id="txtFiche"
+                        pInputText
+                        placeholder="Pre Sub Area"
+                        [(ngModel)]="edu.perssubarea"
+                        autocomplete="off"
+                      />
+                      <label for="inputtext">Pre Sub Area</label>
+                    </span>
+                  </div>
+                </div>
+              </div> -->
+              <div class="d-flex flex-row col-md-6 col-6">
+                <div class="mb-1 col-md-8 col-8">
+                  <div class="p-field p-col-12 p-md-4">
+                    <span class="p-float-label">
+                      <input
+                      type="text"
+                      class="input-font-w"
+                      id="txtFiche"
+                      pInputText
+                      placeholder="Post Desc."
+                      [(ngModel)]="edu.job_with_description"
+                      autocomplete="off"
+                    />
+                    <label for="inputtext">Post Desc.</label>
+                    </span>
+                  </div>
+                </div>
+              </div>
+          </div>
+           <!-- 4th row -->
+           <!-- <div class="initials p-fluid p-grid col-md-12 col-12"> -->
+            <!-- <div class="d-flex flex-row col-md-4 col-4">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <input
+                    type="text"
+                    class="input-font-w"
+                    id="txtFiche"
+                    pInputText
+                    placeholder="Payroll Area"
+                    [(ngModel)]="edu.payrollarea"
+                    autocomplete="off"
+                  />
+                  <label for="inputtext">Payroll Area</label>
+                  </span>
+                </div>
+              </div>
+            </div> -->
+            
+           
+          <!-- </div> -->
+          <!-- 5th row -->
+          <!-- <div class="initials p-fluid p-grid col-md-12 col-12">
+            <div class="d-flex flex-row col-md-4 col-4">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <input
+                    type="text"
+                    class="input-font-w"
+                    id="txtFiche"
+                    pInputText
+                    placeholder="Position Descp."
+                    [(ngModel)]="edu.position_description"
+                    autocomplete="off"
+                  />
+                  <label for="inputtext">Position Descp.</label>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex flex-row col-md-4 col-4">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <input
+                    type="text"
+                    class="input-font-w"
+                    id="txtFiche"
+                    pInputText
+                    placeholder="Job"
+                    [(ngModel)]="edu.job"
+                    autocomplete="off"
+                  />
+                  <label for="inputtext">Job</label>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex flex-row col-md-4 col-4">
+                <div class="mb-1 col-md-8 col-8">
+                  <div class="p-field p-col-12 p-md-4">
+                    <span class="p-float-label">
+                        <input
+                        type="text"
+                        class="input-font-w"
+                        id="txtFiche"
+                        pInputText
+                        placeholder="Job Descp."
+                        [(ngModel)]="edu.job_description"
+                        autocomplete="off"
+                      />
+                      <label for="inputtext">Job Descp.</label>
+                    </span>
+                  </div>
+                </div>
+              </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  

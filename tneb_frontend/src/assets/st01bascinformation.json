@@ -1,0 +1,30 @@
+{
+	"data": [
+		{
+            "sapcode": "1000080053",
+			"sapdesc": "PLANILUX 5,90MM BV1001CCN2440*1540L0L10",
+			"prodcode": "100008",
+			"proddesc": "PLANILUX.6,0MM",
+			"dimension": "2440 * 1540",
+			"quality": "04",
+			"status": "AVAILABLE",
+			"bayrack": "GD-001",
+			"origin": "G500",
+			"sizecat": "N - MFNS",
+			"startdt": "22-Aug-2020 07:58",
+            "enddt": "22-Aug-2020 07:58",
+            "initvol": "0",
+            "vol":"11",
+            "position":"-",
+            "interleaf":"1 - LUC",
+            "packaging":"022",
+            "stacker":"-",
+            "station": "M530",
+            "packtype":"1001",
+            "fault":"0 - NONE",
+            "protection":"1 - CL123",
+            "racklevel":"-",
+            "packspacer":"0 - NONE"
+        }
+    ]
+}

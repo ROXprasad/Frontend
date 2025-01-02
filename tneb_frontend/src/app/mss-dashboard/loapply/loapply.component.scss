@@ -1,0 +1,64 @@
+
+.icons{
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    color: white;
+    background: #3b5998;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(1.2, 1.2);
+    cursor: pointer;
+}
+/* General container adjustments */
+.container {
+  display: flex;
+  flex-wrap: wrap; /* Allow charts to wrap to the next line */
+  gap: 10px; /* Add some spacing between the charts */
+  padding: 10px;
+}
+
+/* Chart wrapper */
+.chart-wrapper {
+  flex: 1 1 35%; /* By default, each chart takes up to 35% of the container width */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff !important;
+  box-shadow: 1px 3px 12px 3px rgba(0, 0, 0, 0.16);
+  border-radius: 10px;
+  padding: 30px;
+  max-width: 100%; /* Ensure it doesn't overflow */
+  box-sizing: border-box;
+}
+
+/* Make sure the chart takes the full width of its container */
+.chart {
+  height: 350px; /* Fixed height for better visual consistency */
+  width: 100%; /* Ensure the chart fills the container */
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+  .chart-wrapper {
+    flex: 1 1 100%; /* On smaller screens, take up the full width */
+    padding: 15px; /* Adjust padding for smaller screens */
+  }
+
+  .chart {
+    height: 250px; /* Reduce the height for smaller screens */
+  }
+}
+
+/* Further mobile adjustment for very small screens */
+@media (max-width: 480px) {
+  .chart-wrapper {
+    flex: 1 1 100%; /* Charts will stack on smaller screens */
+    padding: 10px; /* Less padding for smaller devices */
+  }
+
+  .chart {
+    height: 200px; /* Further adjust the height on smaller devices */
+  }
+}

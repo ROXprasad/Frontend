@@ -1,0 +1,182 @@
+<div mat-dialog-title class="title d-flex flex-row col-12">
+  <h6 class="col-9" style="color: black !important;">Registration Form.</h6>
+  <i class="fa-solid fa-circle-xmark ms-5 col-2" style="font-size: larger;" (click)="closedialog()"></i>
+</div>
+<hr />
+
+<div mat-dialog-content>
+  <form [formGroup]="registerform" (ngSubmit)="onSubmit()">
+    <div class="radio-group">
+      <label>
+        <input
+          type="radio"
+          value="Employee"
+          [checked]="selectedValue === 'Employee'"
+          (change)="changeposId('EmployeeId')"
+          name="question"
+          formControlName="agree"
+        />
+        Employee
+      </label>
+      
+      <label>
+        <input
+          type="radio"
+          value="Position"
+          [checked]="selectedValue === 'Position'"
+          (change)="changeposId('PositionId')"
+          name="question"
+          formControlName="agree"
+        />
+        Position
+      </label>
+      
+      <!-- <div
+        *ngIf="
+          loginForm.controls['agree'].invalid && 
+          (issubmitted || loginForm.controls['agree'].touched || loginForm.controls['agree'].dirty)
+        "
+        class="error"
+      >
+        <span class="small" *ngIf="loginForm.controls['agree'].errors?.['required']">
+          **Choose Your Position
+        </span>
+      </div> -->
+    </div>
+    <div class="form-group">
+      <input
+        type="number"
+        id="userid"
+        placeholder="EmployeeId"
+        formControlName="userid"
+        required
+      />
+      <div
+        *ngIf="
+          registerform.controls['userid'].invalid &&
+          (submitted ||
+            registerform.controls['userid'].touched ||
+            registerform.controls['userid'].dirty)
+        "
+        class="error"
+      >
+        <span
+          class="small"
+          *ngIf="registerform.controls['userid'].errors?.['required']"
+        >
+          **EmployeeId is required
+        </span>
+        <span
+        class="small"
+        *ngIf="registerform.controls['userid'].errors?.['pattern']"
+      >
+        **EmployeeId contain 8 numbers.
+      </span>
+      </div>
+    </div>
+    <div class="form-group">
+      <input
+        type="email"
+        id="email"
+        placeholder="Email"
+        formControlName="email"
+        required
+      />
+      <div
+        *ngIf="
+          registerform.controls['email'].invalid &&
+          (submitted ||
+            registerform.controls['email'].touched ||
+            registerform.controls['email'].dirty)
+        "
+        class="error"
+      >
+        <span
+          class="small"
+          *ngIf="registerform.controls['email'].errors?.['required']"
+        >
+          **Email is required
+        </span>
+        <span
+          class="small"
+          *ngIf="registerform.controls['email'].errors?.['pattern']"
+        >
+          **Enter Proper Email
+        </span>
+      </div>
+    </div>
+    <div class="form-group position-relative">
+      <div class="input-group">
+        <input
+          type='text'
+          id="password"
+          placeholder="Password"
+          formControlName="passwords"
+          required
+        />
+<!-- 
+        <span class="input-group-icon">
+          <i
+            class="fa-solid"
+            [ngClass]="showPassword ? 'fa-eye-slash' : 'fa-eye'"
+            (click)="togglePasswordVisibility()"
+          ></i>
+        </span> -->
+      </div>
+
+      <div
+        *ngIf="
+          registerform.controls['passwords'].invalid &&
+          (submitted ||
+            registerform.controls['passwords'].touched ||
+            registerform.controls['passwords'].dirty)
+        "
+        class="error"
+      >
+        <span
+          class="small"
+          *ngIf="registerform.controls['passwords'].errors?.['required']"
+        >
+          **Enter Password
+        </span>
+        <small
+          class="small"
+          *ngIf="registerform.controls['passwords'].errors?.['pattern']"
+        >
+          Password must start with a letter, contain at least one number,
+          one special character, and be 8-12 characters long.
+        </small>
+      </div>
+    </div>
+    <div class="form-group">
+      <input
+        type="number"
+        id="number"
+        placeholder="Phone Number"
+        formControlName="number"
+        required
+      />
+      <div
+        *ngIf="
+          registerform.controls['number'].invalid &&
+          (submitted ||
+            registerform.controls['number'].touched ||
+            registerform.controls['number'].dirty)
+        "
+        class="error"
+      >
+        <span
+          class="small"
+          *ngIf="registerform.controls['number'].errors?.['required']"
+        >
+          **Enter number
+        </span>
+        <span *ngIf="registerform.controls['number'].errors?.['pattern']">
+         Phone Number Starts with +91 contains 10 digit.
+        </span>
+      </div>
+    </div>
+
+    <button type="submit">Register</button>
+  </form>
+</div>

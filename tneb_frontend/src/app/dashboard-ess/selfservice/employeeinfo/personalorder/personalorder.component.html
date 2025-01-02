@@ -1,0 +1,356 @@
+<div class="container py-2">
+    <div class="" style="width: 100%">
+      <div class="card mt-2" *ngFor="let edu of additionalCharge; let i = index">
+        <div class="card-body">
+          <h6 class="card-title">Additional Charge</h6>
+        </div>
+        <div>
+          <!-- 1st row -->
+          <div class="initials p-fluid p-grid col-md-12 col-12">
+            <div class="d-flex flex-row col-md-6 col-6">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <input
+                      type="text"
+                      class="input-font-w"
+                      id="txtFiche"
+                      pInputText
+                      placeholder="Additional Charge No."
+                      [(ngModel)]="edu.additionalProcess"
+                      autocomplete="off"
+                      maxlength="10"
+                    />
+                    <label for="inputtext">Additional Charge No.</label>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex flex-row col-md-6 col-6">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <input
+                      type="text"
+                      class="input-font-w"
+                      id="txtFiche"
+                      pInputText
+                      placeholder="Additional Charge Descp."
+                      [(ngModel)]="edu.additionalCharge"
+                      autocomplete="off"
+                      maxlength="10"
+                    />
+                    <label for="inputtext">Additional Charge Descp.</label>
+                  </span>
+                </div>
+              </div>
+            </div>
+           
+          
+          </div>
+     
+          <!-- 2nd row -->
+          <div class="initials p-fluid p-grid col-md-12 col-12">
+            <div class="d-flex flex-row col-md-6 col-6">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <input
+                      type="text"
+                      class="input-font-w"
+                      id="txtFiche"
+                      (input)="past($event)"
+                      #txtFiche2
+                      pInputText
+                      placeholder="Designation"
+                      [(ngModel)]="edu.positionID"
+                      autocomplete="off"
+                      
+                    />
+                    <label for="inputtext">Designation</label>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex flex-row col-md-6 col-6">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <input
+                      type="text"
+                      class="input-font-w"
+                      id="txtFiche"
+                      pInputText
+                      placeholder="Issue Authority"
+                      [(ngModel)]="edu.issueAuthority"
+                      autocomplete="off"
+                    />
+                    <label for="inputtext">Issue Authority.</label>
+                  </span>
+                </div>
+              </div>
+            </div>
+         
+           
+           
+          </div>
+           <!-- 3rd row -->
+          <div class="initials p-fluid p-grid col-md-12 col-12">
+
+            <div class="d-flex flex-row col-md-6 col-6">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <textarea
+                    id="txtFiche4"
+                    [(ngModel)]="edu.remarks"
+                    pInputTextarea
+                    placeholder="Remarks"
+                  ></textarea>
+                    <label for="inputtext">Remarks</label>
+                  </span>
+                </div>
+              </div>
+            </div>
+           
+           
+          </div>
+        </div>
+      </div>
+      <div class="card mt-2" *ngFor="let edu of deputationType; let i = index">
+        <div class="card-body">
+          <h6 class="card-title">Deputation Details</h6>
+        </div>
+        <div>
+          <!-- 1st row -->
+          <div class="initials p-fluid p-grid col-md-12 col-12">
+            <div class="d-flex flex-row col-md-6 col-6">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <input
+                      type="text"
+                      class="input-font-w"
+                      id="txtFiche"
+                      pInputText
+                      placeholder="Deputation Type"
+                      [(ngModel)]="edu.deputationType_Description"
+                      autocomplete="off"
+                      maxlength="10"
+                    />
+                    <label for="inputtext">Deputation Type</label>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex flex-row col-md-6 col-6">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <input
+                      type="text"
+                      class="input-font-w"
+                      id="txtFiche"
+                      pInputText
+                      placeholder="Deputation To"
+                      [(ngModel)]="edu.orgUnitShortText"
+                      autocomplete="off"
+                      maxlength="10"
+                    />
+                    <label for="inputtext">Deputation To</label>
+                  </span>
+                </div>
+              </div>
+            </div>
+          
+          </div>
+          <!-- 2nd row -->
+          <div class="initials p-fluid p-grid col-md-12 col-12">
+            <div class="d-flex flex-row col-md-6 col-6">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <input
+                      type="text"
+                      class="input-font-w"
+                      id="txtFiche"
+                      (input)="past($event)"
+                      #txtFiche2
+                      pInputText
+                      placeholder="Designation"
+                      [(ngModel)]="edu.positionID"
+                      autocomplete="off"
+                      
+                    />
+                    <label for="inputtext">Designation</label>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex flex-row col-md-6 col-6">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <input
+                      type="text"
+                      class="input-font-w"
+                      id="txtFiche"
+                      pInputText
+                      placeholder="Issue Authority"
+                      [(ngModel)]="edu.issueAuthority"
+                      autocomplete="off"
+                    />
+                    <label for="inputtext">Issue Authority.</label>
+                  </span>
+                </div>
+              </div>
+            </div>
+       
+            
+           
+          </div>
+         <!-- 3rd row -->
+         <div class="initials p-fluid p-grid col-md-12 col-12">
+          <div class="d-flex flex-row col-md-6 col-6">
+            <div class="mb-1 col-md-8 col-8">
+              <div class="p-field p-col-12 p-md-4">
+                <span class="p-float-label">
+                  <textarea
+                  id="txtFiche4"
+                  [(ngModel)]="edu.remarks"
+                  pInputTextarea
+                  placeholder="Remarks"
+                ></textarea>
+                  <label for="inputtext">Remarks</label>
+                </span>
+              </div>
+            </div>
+          </div>
+          
+         
+        </div>
+        </div>
+      </div>
+      
+      <div class="card mt-2" *ngFor="let edu of diversionType; let i = index">
+        <div class="card-body">
+          <h6 class="card-title">Diversion Details</h6>
+        </div>
+        <div>
+          <!-- 1st row -->
+          <div class="initials p-fluid p-grid col-md-12 col-12">
+            <div class="d-flex flex-row col-md-6 col-6">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <input
+                      type="text"
+                      class="input-font-w"
+                      id="txtFiche"
+                      pInputText
+                      placeholder="Diversion Type"
+                      [(ngModel)]="edu.diversionType_Description"
+                      autocomplete="off"
+                      maxlength="10"
+                    />
+                    <label for="inputtext">Diversion Type</label>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex flex-row col-md-6 col-6">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <input
+                      type="text"
+                      class="input-font-w"
+                      id="txtFiche"
+                      pInputText
+                      placeholder="Diversion To"
+                      [(ngModel)]="edu.diversion"
+                      autocomplete="off"
+                      maxlength="10"
+                    />
+                    <label for="inputtext">Diversion To</label>
+                  </span>
+                </div>
+              </div>
+            </div>
+           
+          
+          </div>
+          <!-- 2nd row -->
+          <div class="initials p-fluid p-grid col-md-12 col-12">
+            <div class="d-flex flex-row col-md-6 col-6">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <input
+                      type="text"
+                      class="input-font-w"
+                      id="txtFiche"
+                      (input)="past($event)"
+                      #txtFiche2
+                      pInputText
+                      placeholder="Designation"
+                      [(ngModel)]="edu.positionID"
+                      autocomplete="off"
+                      
+                    />
+                    <label for="inputtext">Designation</label>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex flex-row col-md-6 col-6">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <input
+                      type="text"
+                      class="input-font-w"
+                      id="txtFiche"
+                      pInputText
+                      placeholder="Issue Authority"
+                      [(ngModel)]="edu.issueAuthority"
+                      autocomplete="off"
+                    />
+                    <label for="inputtext">Issue Authority.</label>
+                  </span>
+                </div>
+              </div>
+            </div>
+           
+            
+           
+          </div>
+          <div class="initials p-fluid p-grid col-md-12 col-12">
+            <div class="d-flex flex-row col-md-6 col-6">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <input
+                      type="text"
+                      class="input-font-w"
+                      id="txtFiche"
+                      (input)="past($event)"
+                      #txtFiche2
+                      pInputText
+                      placeholder="Remarks"
+                      [(ngModel)]="edu.remarks"
+                      autocomplete="off"
+                      
+                    />
+                    <label for="inputtext">Remarks</label>
+                  </span>
+                </div>
+              </div>
+            </div>                
+          </div>
+        </div>
+      </div>
+     
+    </div>
+  </div>
+  

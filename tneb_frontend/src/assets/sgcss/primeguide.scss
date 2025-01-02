@@ -1,0 +1,39 @@
+.p-paginator .p-paginator-pages .p-paginator-page.p-highlight {
+    background: #212699 !important;
+    border-color: #212699 !important;
+}
+
+.p-link:focus {
+    outline: 0 none;
+    outline-offset: 0;
+    box-shadow: 0 0 0 0.2rem rgb(33 38 153) !important;
+}
+
+.p-dropdown-panel .p-dropdown-items .p-dropdown-item.p-highlight {
+    color: #ffffff !important;
+    background: #212699 !important;
+}
+
+span>.p-inputtext:enabled:focus {
+    border-color: #212699 !important;
+    box-shadow: 0 0 0 0.02rem #212699 !important;
+}
+
+
+span>.p-inputtext:hover {
+    box-shadow: 0 0 0 0.02rem #212699 !important;
+}
+
+::ng-deep .p-inputtext.ng-dirty.ng-invalid:enabled:focus {
+    box-shadow: 0 0 0 0.2rem rgba(255, 0, 0, 0.377);
+}
+
+input.p-multiselect-filter.p-inputtext.p-component {
+    border-color: #212699 !important;
+    box-shadow: 0 0 0 0.02rem #212699 !important;
+}
+
+.p-multiselect.p-component:focus {
+    border-color: #212699 !important;
+    box-shadow: 0 0 0 0.02rem #212699 !important;
+}

@@ -1,0 +1,20 @@
+<div class="mt-1">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-4 gy-3">
+      <div class="widget-container" *ngFor="let edu of newarray; let i = index">
+        <div class="widget" >
+          <div class="header ">{{ edu.key }}</div>
+          <div class="row d-flex align-items-center justify-content-center">
+            <div class="icon ms-2 col-4">
+              <i [class]="edu.icons"></i>
+            </div>
+            <div class="value ms-2 col-8">
+              <div class="bottom ">Availed: - {{ edu.availed }}</div>
+              <div class="bottom ">Balance: - {{ edu.balance }}</div>
+              <div class="bottom ">Total: - {{ edu.total }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

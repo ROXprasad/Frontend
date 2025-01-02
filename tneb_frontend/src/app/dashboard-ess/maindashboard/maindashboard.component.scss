@@ -1,0 +1,68 @@
+/* Base styles for larger screens */
+.container {
+  padding: 20px;
+}
+
+.app-top-widgets,
+.app-leavecalendar {
+  width: 100%;
+}
+
+/* Media query for screens less than or equal to 720px */
+@media (max-width: 720px) {
+  .col-3, .col-9 {
+    width: 100% !important;  /* Force both columns to take full width */
+  }
+
+  .col-3 {
+    order: 1; /* Make sure the first column stays on top in smaller screens */
+  }
+
+  .col-9 {
+    order: 2; /* The second column comes below */
+  }
+}
+.container {
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    
+    // Make each column stack vertically if screen width is 200px or smaller
+    @media (max-width: 200px) {
+      flex-direction: column;
+    }
+  }
+
+  .col-12, .col-6 {
+    // padding: 15px;
+    margin:0px !important;
+    padding: 0px !important;
+    box-sizing: border-box;
+  }
+
+  .col-6 {
+    width: 50%;
+    
+    @media (max-width: 200px) {
+      width: 100%; // Stack the columns vertically in 200px width screens
+    }
+  }
+
+  .col-12 {
+    width: 100%;
+  }
+  
+  // Add any other responsive adjustments based on screen size
+  @media (max-width: 768px) {
+    .col-6 {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .col-12 {
+      width: 100%;
+    }
+  }
+}
+

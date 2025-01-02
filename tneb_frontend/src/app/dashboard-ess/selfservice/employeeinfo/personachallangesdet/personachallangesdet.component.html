@@ -1,0 +1,306 @@
+<div class="container py-2">
+    <div class="" style="width: 100%">
+      <div class="card mt-2" *ngFor="let edu of personalform; let i = index">
+        <div class="card-body">
+          <h6 class="card-title">Personal Challenge Details - {{ i + 1 }}</h6>
+        </div>
+        <div>
+          <!-- 1st row -->
+          <div class="initials p-fluid p-grid col-md-12 col-12">
+            <!-- <div class="d-flex flex-row col-md-4 col-4">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <p-calendar
+                      [appendTo]="'body'" 
+                      dateFormat="dd-mm-yy"
+                      inputId="dateformat"
+                      [(ngModel)]="edu.startDate"
+                      placeholder="Start Date"
+                    ></p-calendar>
+                    <label for="inputtext">Don’t need to populate</label>
+                  </span>
+                </div>
+              </div>
+            </div> -->
+            <!-- <div class="d-flex flex-row col-md-4 col-4">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <input
+                      type="text"
+                      class="input-font-w"
+                      id="txtFiche"
+                      pInputText
+                      placeholder="Challengegroup"
+                      [(ngModel)]="edu.challengegroup"
+                      autocomplete="off"
+                      maxlength="10"
+                    />
+                    <label for="inputtext">Challengegroup</label>
+                  </span>
+                </div>
+              </div>
+            </div> -->
+            <div class="d-flex flex-row col-md-4 col-4">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <input
+                      type="text"
+                      class="input-font-w"
+                      id="txtFiche"
+                      pInputText
+                      placeholder="Degree Challenge"
+                      [(ngModel)]="edu.degreechallenge1"
+                      autocomplete="off"
+                    />
+                    <label for="inputtext">Percentage Of Disability</label>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="d-flex flex-row col-md-4 col-4">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <input
+                      type="text"
+                      class="input-font-w"
+                      id="txtFiche"
+                      placeholder="Official Agency"
+                      pInputText
+                      [(ngModel)]="edu.officialagency1"
+                      autocomplete="off"
+                    />
+                    <label for="inputtext">Issusing authority</label>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="d-flex flex-row col-md-4 col-4">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <input
+                      type="text"
+                      class="input-font-w"
+                      id="txtFiche"
+                      placeholder="Reference No."
+                      pInputText
+                      [(ngModel)]="edu.referenceno1"
+                      autocomplete="off"
+                    />
+                    <label for="inputtext">Ref Id number</label>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="d-flex flex-row col-md-4 col-4">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <input
+                      type="text"
+                      class="input-font-w"
+                      id="txtFiche"
+                      placeholder="Challange Type"
+                      pInputText
+                      [(ngModel)]="edu.challengetype"
+                      autocomplete="off"
+                    />
+                    <label for="inputtext">Challange Type</label>
+                  </span>
+                </div>
+              </div>
+            </div> -->
+            <!-- <div class="d-flex flex-row col-md-4 col-4"> -->
+              <!-- <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <input
+                      type="text"
+                      class="input-font-w"
+                      id="txtFiche"
+                      placeholder="Credit Factor"
+                      [(ngModel)]="edu.creditfactor"
+                      pInputText
+                      autocomplete="off"
+                    />
+                    <label for="inputtext">Don’t need to populate</label>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div> -->
+          <!-- 2nd row -->
+          <div class="initials p-fluid p-grid col-md-12 col-12">
+            
+           
+            <!-- <div class="d-flex flex-row col-md-4 col-4">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <input
+                      type="text"
+                      class="input-font-w"
+                      id="txtFiche"
+                      placeholder="Official Agency"
+                      pInputText
+                      [(ngModel)]="edu.officialagency1"
+                      autocomplete="off"
+                    />
+                    <label for="inputtext">Issusing authority</label>
+                  </span>
+                </div>
+              </div>
+            </div> -->
+            <!-- <div class="d-flex flex-row col-md-4 col-4">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <input
+                      type="text"
+                      class="input-font-w"
+                      id="txtFiche"
+                      placeholder="Reference No."
+                      pInputText
+                      [(ngModel)]="edu.referenceno1"
+                      autocomplete="off"
+                    />
+                    <label for="inputtext">Ref Id number</label>
+                  </span>
+                </div>
+              </div>
+            </div> -->
+            <div class="d-flex flex-row col-md-4 col-4">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <p-calendar
+                      [appendTo]="'body'"
+                      dateFormat="dd-mm-yy"
+                      inputId="dateformat"
+                      #txtFiche5
+                      placeholder="Challenge Date"
+                      [(ngModel)]="edu.challengedate1"
+                    ></p-calendar>
+                    <label for="inputtext">Challenge Certificate Date</label>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex flex-row col-md-4 col-4">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <input
+                      type="text"
+                      class="input-font-w"
+                      id="txtFiche"
+                      placeholder="Challenge Group"
+                      pInputText
+                      [(ngModel)]="edu.challengegroup_description"
+                      autocomplete="off"
+                    />
+                    <label for="inputtext">Challenge group</label>
+                  </span>
+                </div>
+              </div>
+            </div>
+            
+          <div class="d-flex flex-row col-md-4 col-4">
+            <div class="mb-1 col-md-8 col-8">
+              <div class="p-field p-col-12 p-md-4">
+                <span class="p-float-label">
+                  <input
+                  type="text"
+                  class="input-font-w"
+                  id="txtFiche"
+                  placeholder="Challenge Type"
+                  pInputText
+                  [(ngModel)]="edu.challengetype_description"
+                  autocomplete="off"
+                />
+                <label for="inputtext">Challenge type </label>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+         
+
+          </div>
+
+         
+
+
+          <!-- <div class="initials p-fluid p-grid col-md-12 col-12"> -->
+           
+           
+            <!-- <div class="d-flex flex-row col-md-4 col-4">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <p-calendar
+                      [appendTo]="'body'"
+                      dateFormat="dd-mm-yy"
+                      inputId="dateformat"
+                      #txtFiche5
+                      placeholder="ID Date"
+                      [(ngModel)]="edu.iddate"
+                    ></p-calendar>
+                    <label for="inputtext">Don’t need to populate</label>
+                  </span>
+                </div>
+              </div>
+            </div> -->
+            <!-- <div class="d-flex flex-row col-md-4 col-4">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <input
+                      type="text"
+                      class="input-font-w"
+                      id="txtFiche"
+                      placeholder="Challenge Group"
+                      pInputText
+                      [(ngModel)]="edu.challengegroup_description"
+                      autocomplete="off"
+                    />
+                    <label for="inputtext">Challenge group</label>
+                  </span>
+                </div>
+              </div>
+            </div> -->
+            <!-- <div class="d-flex flex-row col-md-4 col-4">
+              <div class="mb-1 col-md-8 col-8">
+                <div class="p-field p-col-12 p-md-4">
+                  <span class="p-float-label">
+                    <input
+                    type="text"
+                    class="input-font-w"
+                    id="txtFiche"
+                    placeholder="Challenge Type"
+                    pInputText
+                    [(ngModel)]="edu.challengetype_description"
+                    autocomplete="off"
+                  />
+                  <label for="inputtext">Challenge type </label>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div> -->
+          <!-- 4th row -->
+          <!-- <div class="initials p-fluid p-grid col-md-12 col-12">
+            
+            
+          </div> -->
+        </div>  
+      </div>
+    </div>
+  </div>
+  

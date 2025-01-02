@@ -1,0 +1,14 @@
+{
+	"data": {
+		"DIALOGTITLE": {
+         "PERSONDETAILS":"Personal Info.",
+         "BASICDETAILS" :"Basic Info.",
+		 "LEAVEQUTO" :"Leave Quota"
+        },
+		
+		"LABEL": {
+	
+		}
+	},
+	"lang": "en"
+}

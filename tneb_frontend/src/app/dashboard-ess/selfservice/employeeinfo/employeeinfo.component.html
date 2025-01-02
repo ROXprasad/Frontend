@@ -1,0 +1,725 @@
+<mat-accordion class="example-headers-align">
+  <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <div
+          class="m-3 d-flex flex-row align-items-center justify-content-center"
+        >
+          <i
+            class="material-icons"
+            style="font-size: 25px; color: #57747b !important; font-weight: 600"
+            >person</i
+          >
+          <!-- <span>
+            <button class="user-btn"> 
+            <img src="../../../assets/Image.png" class="icons" />
+            <img [src]="imageUrls" alt="Image" class="icons"/>
+            </button>
+            Image for Bytes of Array to show --
+            <div *ngFor="let imageUrl of imageUrls"> 
+            <img [src]="imageUrls" alt="Image" /> 
+            </div>
+          </span> -->
+          <span
+            class="ms-1 p-2"
+            style="
+              font-size: medium;
+              color: #57747b !important;
+              font-weight: 600;
+            "
+            translate="DIALOGTITLE.PERSONDETAILS"
+          >
+          </span>
+        </div>
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <div class="card" style="text-transform: capitalize">
+      <div class="card-body">
+        <div class="card-text">
+          <div class="container">
+            <div class="row" *ngIf="!isMobile">
+              <div class="col-2">
+                <div class="row col-10">
+                  <span
+                    class="col-12"
+                    style="
+                      text-align: start;
+                      font-size: medium;
+                      font-weight: 400;
+                    "
+                  >
+                    <img [src]="imageUrls" alt="Image" class="icons" />
+                  </span>
+                </div>
+                <!-- photo-upload.component.html -->
+                <div class="photo-upload-container mt-2">
+                  <!-- Custom styled label that triggers the file input -->
+                  <label class="custom-file-upload">
+                    <span
+                      style="
+                        font-size: smaller;
+                        display: flex;
+                        flex-direction: row;
+                      "
+                    >
+                      <i class="fa fa-camera mt-1"></i>Upload Photo(s)
+                    </span>
+                    <!-- Hidden file input element -->
+                    <input
+                      type="file"
+                      accept="image/*"
+                      (change)="onFileChange($event)"
+                      multiple
+                    />
+                  </label>
+                </div>
+              </div>
+              <div class="col-5 mt-2">
+                <div class="row col-12">
+                  <span
+                    class="col-4"
+                    style="
+                      text-align: start;
+                      font-size: small;
+                      font-weight: 400;
+                    "
+                  >
+                    Name</span
+                  >
+                  <span
+                    class="col-2"
+                    style="text-align: center; font-weight: 600"
+                    >:</span
+                  >
+                  <span
+                    class="col-6"
+                    style="
+                      text-align: start;
+                      font-size: small;
+                      font-weight: 600;
+                    "
+                  >
+                    {{ name }}</span
+                  >
+                </div>
+                <div class="row col-12">
+                  <span
+                    class="col-4"
+                    style="
+                      text-align: start;
+                      font-size: small;
+                      font-weight: 400;
+                    "
+                  >
+                    Date of Birth</span
+                  >
+                  <span
+                    class="col-2"
+                    style="text-align: center; font-weight: 600"
+                    >:</span
+                  >
+                  <span
+                    class="col-6"
+                    style="
+                      text-align: start;
+                      font-size: small;
+                      font-weight: 600;
+                    "
+                  >
+                    {{ dob | date : "dd-MM-yyyy" }}</span
+                  >
+                </div>
+                <div class="row col-12">
+                  <span
+                    class="col-4"
+                    style="
+                      text-align: start;
+                      font-size: small;
+                      font-weight: 400;
+                    "
+                  >
+                    Gender</span
+                  >
+                  <span
+                    class="col-2"
+                    style="text-align: center; font-weight: 600"
+                    >:</span
+                  >
+                  <span
+                    class="col-6"
+                    style="
+                      text-align: start;
+                      font-size: small;
+                      font-weight: 600;
+                    "
+                  >
+                    {{ gender }}</span
+                  >
+                </div>
+                <div class="row col-12">
+                  <span
+                    class="col-4"
+                    style="
+                      text-align: start;
+                      font-size: small;
+                      font-weight: 400;
+                    "
+                  >
+                    Date Of Joining Board</span
+                  >
+                  <span
+                    class="col-2"
+                    style="text-align: center; font-weight: 600"
+                    >:</span
+                  >
+                  <span
+                    class="col-6"
+                    style="
+                      text-align: start;
+                      font-size: small;
+                      font-weight: 600;
+                    "
+                  >
+                    {{ doj | date : "dd-MM-yyyy" }}</span
+                  >
+                </div>
+               
+              </div>
+              <div class="col-5 mt-2">
+                <div class="row col-12">
+                  <span
+                    class="col-4"
+                    style="
+                      text-align: start;
+                      font-size: small;
+                      font-weight: 400;
+                    "
+                  >
+                    State</span
+                  >
+                  <span
+                    class="col-2"
+                    style="text-align: center; font-weight: 600"
+                    >:</span
+                  >
+                  <span
+                    class="col-6"
+                    style="
+                      text-align: start;
+                      font-size: small;
+                      font-weight: 600;
+                    "
+                  >
+                    {{ state }}</span
+                  >
+                </div>
+                <div class="row col-12">
+                  <span
+                    class="col-4"
+                    style="
+                      text-align: start;
+                      font-size: small;
+                      font-weight: 400;
+                    "
+                  >
+                    Identification Marks</span
+                  >
+                  <span
+                    class="col-2"
+                    style="text-align: center; font-weight: 600"
+                    >:</span
+                  >
+                  <span
+                    class="col-6"
+                    style="
+                      text-align: start;
+                      font-size: small;
+                      font-weight: 600;
+                    "
+                  >
+                    {{ specialfeatures }}</span
+                  >
+                </div>
+                <div class="row col-12">
+                  <span
+                    class="col-4"
+                    style="
+                      text-align: start;
+                      font-size: small;
+                      font-weight: 400;
+                    "
+                  >
+                    Blood Group
+                  </span>
+                  <span
+                    class="col-2"
+                    style="text-align: center; font-weight: 600"
+                    >:</span
+                  >
+                  <span
+                    class="col-6"
+                    style="
+                      text-align: start;
+                      font-size: small;
+                      font-weight: 600;
+                    "
+                  >
+                    {{ bloodgroup }}</span
+                  >
+                </div>
+                <div class="row col-12">
+                  <span
+                    class="col-4"
+                    style="
+                      text-align: start;
+                      font-size: small;
+                      font-weight: 400;
+                    "
+                  >
+                    Date of Retirement
+                  </span>
+                  <span
+                    class="col-2"
+                    style="text-align: center; font-weight: 600"
+                    >:</span
+                  >
+                  <span
+                    class="col-6"
+                    style="
+                      text-align: start;
+                      font-size: small;
+                      font-weight: 600;
+                    "
+                  >
+                    {{ dor | date : "dd-MM-yyyy" }}</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="row" *ngIf="isMobile">
+              <div class="col-2">
+                <div class="row col-10">
+                  <span
+                    class="col-12"
+                    style="
+                      text-align: start;
+                      font-size: medium;
+                      font-weight: 400;
+                    "
+                  >
+                    <img [src]="imageUrls" alt="Image" class="icons" />
+                  </span>
+                </div>
+                <!-- photo-upload.component.html -->
+                <div class="photo-upload-container mt-2">
+                  <!-- Custom styled label that triggers the file input -->
+                  <label class="custom-file-upload">
+                    <span
+                      style="
+                        font-size: smaller;
+                        display: flex;
+                        flex-direction: row;
+                      "
+                    >
+                      <i class="fa fa-camera mt-1"></i>Upload Photo(s)
+                    </span>
+                    <!-- Hidden file input element -->
+                    <input
+                      type="file"
+                      accept="image/*"
+                      (change)="onFileChange($event)"
+                      multiple
+                    />
+                  </label>
+                </div>
+              </div>
+              <div class="col-5 mt-2">
+                <div class="row col-12">
+                  <span
+                    class="col-4"
+                    style="
+                      text-align: start;
+                      font-size: small;
+                      font-weight: 400;
+                    "
+                  >
+                    Name</span
+                  >
+                  <span
+                    class="col-2"
+                    style="text-align: center; font-weight: 600"
+                    >:</span
+                  >
+                  <span
+                    class="col-6"
+                    style="
+                      text-align: start;
+                      font-size: small;
+                      font-weight: 600;
+                    "
+                  >
+                    {{ name }}</span
+                  >
+                </div>
+                <div class="row col-12">
+                  <span
+                    class="col-4"
+                    style="
+                      text-align: start;
+                      font-size: small;
+                      font-weight: 400;
+                    "
+                  >
+                    DOB</span
+                  >
+                  <span
+                    class="col-2"
+                    style="text-align: center; font-weight: 600"
+                    >:</span
+                  >
+                  <span
+                    class="col-6"
+                    style="
+                      text-align: start;
+                      font-size: small;
+                      font-weight: 600;
+                    "
+                  >
+                    {{ dob | date : "dd-MM-yyyy" }}</span
+                  >
+                </div>
+                <div class="row col-12">
+                  <span
+                    class="col-4"
+                    style="
+                      text-align: start;
+                      font-size: small;
+                      font-weight: 400;
+                    "
+                  >
+                    DOJ</span
+                  >
+                  <span
+                    class="col-2"
+                    style="text-align: center; font-weight: 600"
+                    >:</span
+                  >
+                  <span
+                    class="col-6"
+                    style="
+                      text-align: start;
+                      font-size: small;
+                      font-weight: 600;
+                    "
+                  >
+                    {{ doj | date : "dd-MM-yyyy" }}</span
+                  >
+                </div>
+                <div class="row col-12">
+                  <span
+                    class="col-4"
+                    style="
+                      text-align: start;
+                      font-size: small;
+                      font-weight: 400;
+                    "
+                  >
+                    Gender</span
+                  >
+                  <span
+                    class="col-2"
+                    style="text-align: center; font-weight: 600"
+                    >:</span
+                  >
+                  <span
+                    class="col-6"
+                    style="
+                      text-align: start;
+                      font-size: small;
+                      font-weight: 600;
+                    "
+                  >
+                    {{ gender }}</span
+                  >
+                </div>
+              </div>
+              <div class="col-5 mt-2">
+                <div class="row col-12">
+                  <span
+                    class="col-4"
+                    style="
+                      text-align: start;
+                      font-size: small;
+                      font-weight: 400;
+                    "
+                  >
+                    State</span
+                  >
+                  <span
+                    class="col-2"
+                    style="text-align: center; font-weight: 600"
+                    >:</span
+                  >
+                  <span
+                    class="col-6"
+                    style="
+                      text-align: start;
+                      font-size: small;
+                      font-weight: 600;
+                    "
+                  >
+                    {{ state }}</span
+                  >
+                </div>
+                <div class="row col-12">
+                  <span
+                    class="col-4"
+                    style="
+                      text-align: start;
+                      font-size: small;
+                      font-weight: 400;
+                    "
+                  >
+                    ID Marks</span
+                  >
+                  <span
+                    class="col-2"
+                    style="text-align: center; font-weight: 600"
+                    >:</span
+                  >
+                  <span
+                    class="col-6"
+                    style="
+                      text-align: start;
+                      font-size: small;
+                      font-weight: 600;
+                    "
+                  >
+                    {{ specialfeatures }}</span
+                  >
+                </div>
+                <div class="row col-12">
+                  <span
+                    class="col-4"
+                    style="
+                      text-align: start;
+                      font-size: small;
+                      font-weight: 400;
+                    "
+                  >
+                    DOR
+                  </span>
+                  <span
+                    class="col-2"
+                    style="text-align: center; font-weight: 600"
+                    >:</span
+                  >
+                  <span
+                    class="col-6"
+                    style="
+                      text-align: start;
+                      font-size: small;
+                      font-weight: 600;
+                    "
+                  >
+                    {{ dor | date : "dd-MM-yyyy" }}</span
+                  >
+                </div>
+                <div class="row col-12">
+                  <span
+                    class="col-4"
+                    style="
+                      text-align: start;
+                      font-size: small;
+                      font-weight: 400;
+                    "
+                  >
+                    Blood Group
+                  </span>
+                  <span
+                    class="col-2"
+                    style="text-align: center; font-weight: 600"
+                    >:</span
+                  >
+                  <span
+                    class="col-6"
+                    style="
+                      text-align: start;
+                      font-size: small;
+                      font-weight: 600;
+                    "
+                  >
+                    {{ bloodgroup }}</span
+                  >
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Show the error message if validation fails -->
+        <div
+          *ngIf="errorMessage"
+          class="error-message"
+          style="font-size: smaller"
+        >
+          {{ errorMessage }}
+        </div>
+
+        <!-- Display file names -->
+        <div *ngIf="fileNames.length > 0" class="imageupload">
+          <span class="imageupload"
+            >Uploaded Files : -
+            <ul class="imageupload mt-3 ms-2">
+              <li *ngFor="let fileName of fileNames" style="font-size: smaller">
+                {{ fileName }}
+              </li>
+              <i class="fa fa-upload ms-2 mt-0"></i>
+            </ul>
+          </span>
+        </div>
+      </div>
+    </div>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <div
+          class="m-3 d-flex flex-row align-items-center justify-content-center"
+        >
+          <i
+            class="material-icons"
+            style="font-size: 25px; color: #57747b !important; font-weight: 600"
+            >assignment_ind</i
+          >
+          <span
+            class="ms-1 p-2"
+            style="
+              font-size: medium;
+              color: #57747b !important;
+              font-weight: 600;
+            "
+            translate="DIALOGTITLE.BASICDETAILS"
+          >
+          </span>
+        </div>
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <div class="card container mt-2">
+      <mat-tab-group
+        [(selectedIndex)]="selectedIndexBinding"
+        class="mat-tab-group mat-primary mt-2"
+        #tabgroup
+        dynamicHeight
+        mat-align-tabs="center"
+      >
+        <mat-tab [label]="tab.key" *ngFor="let tab of tabs">
+          <div class="p-2" *ngIf="tab.Value == 'Personal details'">
+            <app-personaldetails></app-personaldetails>
+          </div>
+          <div class="p-2" *ngIf="tab.Value == 'Education details'">
+            <app-educationaldetails></app-educationaldetails>
+          </div>
+          <div class="p-2" *ngIf="tab.Value == 'Family Details'">
+            <app-familydetails></app-familydetails>
+          </div>
+          <div class="p-2" *ngIf="tab.Value == 'Physical-Challange Details'">
+            <app-personachallangesdet></app-personachallangesdet>
+          </div>
+          <div class="p-2" *ngIf="tab.Value == 'Address'">
+            <app-addressdetails></app-addressdetails>
+          </div>
+          <div class="p-2" *ngIf="tab.Value == 'Organization Details'">
+            <app-employeeorgdet></app-employeeorgdet>
+          </div>
+          <div class="p-2" *ngIf="tab.Value == 'Bank details'">
+            <app-bankdetails></app-bankdetails>
+          </div>
+          <div class="p-2" *ngIf="tab.Value == 'Personal Commun. Details'">
+            <app-personalcommun></app-personalcommun>
+          </div>
+          <div class="p-2" *ngIf="tab.Value == 'Order details'">
+            <app-personalorder></app-personalorder>
+          </div>
+          <div class="p-2" *ngIf="tab.Value == 'Personal PF'">
+            <app-personalpf></app-personalpf>
+          </div>
+          <div class="p-2" *ngIf="tab.Value == 'PersonalOtherStatutory'">
+            <app-personalotherstatutory></app-personalotherstatutory>
+          </div>
+          <div class="p-2" *ngIf="tab.Value == 'Training details'">
+            <app-trainingdet></app-trainingdet>
+          </div>
+          <div class="p-2" *ngIf="tab.Value == 'Department Test'">
+            <app-departmenttest></app-departmenttest>
+          </div>
+          <div class="p-2" *ngIf="tab.Value == 'Personal Awards'">
+            <app-personalawards></app-personalawards>
+          </div>
+          <div class="p-2" *ngIf="tab.Value == 'Personal IDs'">
+            <app-personalids></app-personalids>
+          </div>
+          <!-- <div class="p-2" *ngIf="tab.Value == 'Nomination details'">
+            <app-nominationdetails></app-nominationdetails>
+           </div> -->
+           
+          <div
+            class="p-2"
+            *ngIf="
+              tab.Value != 'Personal details' &&
+              tab.Value != 'Education details' &&
+              tab.Value != 'Family Details' &&
+              tab.Value != 'Physical-Challange Details' &&
+              tab.Value != 'Address' &&
+              tab.Value != 'Organization Details' &&
+              tab.Value != 'Bank details' &&
+              tab.Value != 'Personal Commun. Details' &&
+              tab.Value != 'Order details' &&
+              tab.Value != 'Personal PF' &&
+              tab.Value != 'PersonalOtherStatutory' &&
+              tab.Value != 'Training details' &&
+              tab.Value != 'Department Test' &&
+              tab.Value != 'Personal Awards' &&
+              tab.Value != 'Personal IDs'
+            "
+            [ngClass]="tab.Value"
+          >
+            {{ tab.Value }}
+          </div>
+        </mat-tab>
+        <mat-tab
+          label="Tab 5"
+          disabled
+          style="text-align: center; word-break: normal"
+        >
+          <ng-template mat-tab-label>
+            <button
+              mat-icon-button
+              [matMenuTriggerFor]="menu"
+              (click)="$event.stopPropagation()"
+              aria-label="Example icon-button with a menu"
+            >
+              <!-- Additional Info -->
+              <mat-icon
+                color="warn"
+                aria-label="Example icon-button with a heart icon"
+                >more_vert</mat-icon
+              > 
+            </button>
+            <mat-menu #menu="matMenu" yPosition="below" class="some-class-name">
+              <button
+                mat-menu-item
+                (click)="changeTab(item.key)"
+                *ngFor="let item of ExtraTab"
+              >
+                {{ item.key }}
+              </button>
+            </mat-menu>
+          </ng-template>
+          No content
+        </mat-tab>
+      </mat-tab-group>
+    </div>
+  </mat-expansion-panel>
+</mat-accordion>

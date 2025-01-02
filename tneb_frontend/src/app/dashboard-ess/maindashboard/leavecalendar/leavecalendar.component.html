@@ -1,0 +1,10 @@
+<div *ngIf="!isMobile" class="card mat-elevation-z4">
+    <div class="card-body">
+      <full-calendar [options]="calendarOptions"></full-calendar>
+    </div>
+  </div>
+  
+  <!-- Show FullCalendar outside .card for smaller screens -->
+   <div class="card" *ngIf="isMobile">
+    <full-calendar  [options]="calendarOptions"></full-calendar>
+   </div>
